@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "bekka",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Bekka Pramheda",
+  "description": "I can offer you something even more powerful than the Flame... the true legacy of Bekka Pramheda, all power, all wisdom contained in one simple key.",
   "authors": [
-    "Me!"
+    "theelo"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/bekka/ico/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.theelo.bekka.BekkaPramheda"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "bekka.mixins.json"
   ],
 
   "depends": {
