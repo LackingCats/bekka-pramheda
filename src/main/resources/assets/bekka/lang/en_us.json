@@ -4,5 +4,9 @@
   "item.bekka.shard_of_tanzanite": "Shard Of Tanzanite",
 
   "block.bekka.tanzanite_block": "Block of Tanzanite",
-  "block.bekka.raw_tanzanite_block": "Block of Raw Tanzanite"
+  "block.bekka.raw_tanzanite_block": "Block of Raw Tanzanite",
+  "block.bekka.compressed_tanzanite_block": "Block of Compressed Tanzanite",
+  "block.bekka.tanzanite_ore": "Tanzanite Ore",
+  "block.bekka.deepslate_tanzanite_ore": "Deepslate Tanzanite Ore",
+  "block.bekka.nether_tanzanite_ore": "Nether Tanzanite Ore"
 }

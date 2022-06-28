@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "bekka:block/deepslate_tanzanite_ore"
+  }
+}
