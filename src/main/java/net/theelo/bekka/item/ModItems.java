@@ -5,20 +5,20 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
+import net.theelo.bekka.lib0.ModItemGroup;
 
 public class ModItems {
     public static final Item TANZANITE = registerItems("tanzanite",
-            new Item(new FabricItemSettings().maxCount(64).fireproof().group(ItemGroup.MISC)));
+            new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
 
     public static final Item RAW_TANZANITE = registerItems("raw_tanzanite",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC).maxCount(32)));
+            new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(32)));
 
     public static final Item SHARD_OF_TANZANITE = registerItems("shard_of_tanzanite",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC).maxCount(64).food(
+            new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(64).food(
                     new FoodComponent.Builder().statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION,20*300, 255, false, false, false), 1f).snack().build())));
 
 

@@ -8,5 +8,7 @@
   "block.bekka.compressed_tanzanite_block": "Block of Compressed Tanzanite",
   "block.bekka.tanzanite_ore": "Tanzanite Ore",
   "block.bekka.deepslate_tanzanite_ore": "Deepslate Tanzanite Ore",
-  "block.bekka.nether_tanzanite_ore": "Nether Tanzanite Ore"
+  "block.bekka.nether_tanzanite_ore": "Nether Tanzanite Ore",
+
+  "itemGroup.bekka.tanzanite": "Tanzanite"
 }
