@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bekka:raw_tanzanite_block"
+    }
+  ],
+  "result": {
+    "item": "bekka:raw_tanzanite",
+    "count": 9
+  }
+}

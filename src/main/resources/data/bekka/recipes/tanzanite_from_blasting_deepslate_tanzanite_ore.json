@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 6.0,
+  "ingredient": {
+    "item": "bekka:deepslate_tanzanite_ore"
+  },
+  "result": "bekka:tanzanite"
+}

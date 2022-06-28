@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bekka:tanzanite"
+    }
+  ],
+  "result": {
+    "item": "bekka:shard_of_tanzanite",
+    "count": 9
+  }
+}
