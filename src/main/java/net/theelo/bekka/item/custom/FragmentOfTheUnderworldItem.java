@@ -33,7 +33,7 @@ public class FragmentOfTheUnderworldItem extends Item {
     @Override
     public ActionResult useOnEntity(ItemStack itemStack, @NotNull PlayerEntity user, @NotNull LivingEntity entity, Hand hand) {
         if(rand() > 50) { //fifty percent chance
-            entity.teleport(entity.getX(), -5, entity.getZ());
+            entity.teleport(entity.getX(), -70, entity.getZ());
             user.sendMessage(new LiteralText("bye"), true);
         } else {
             user.sendMessage(new LiteralText("u are not worthy"), true);
