@@ -35,8 +35,10 @@ public class FragmentOfTheUnderworldItem extends Item {
         if(rand() > 50) { //fifty percent chance
             entity.teleport(entity.getX(), -70, entity.getZ());
             user.sendMessage(new LiteralText("bye"), true);
+            user.getItemCooldownManager().set(this, 20*5);
         } else {
             user.sendMessage(new LiteralText("u are not worthy"), true);
+            user.getItemCooldownManager().set(this, 20*5);
         }
         return super.useOnEntity(itemStack, user, entity, hand);
     }

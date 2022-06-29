@@ -36,8 +36,10 @@ public class FragmentOfTheHeavensItem extends Item {
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION,20*20, 2, false, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING,20*40, 2, false, false, false));
             user.sendMessage(new LiteralText("bye"), true);
+            user.getItemCooldownManager().set(this, 20*5); //20 (one second/20 ticks)
         } else {
             user.sendMessage(new LiteralText("u are not worthy"), true);
+            user.getItemCooldownManager().set(this, 20*5);
         }
         return super.useOnEntity(itemStack, user, entity, hand);
     }
