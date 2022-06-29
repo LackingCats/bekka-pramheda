@@ -31,14 +31,17 @@ public class EightBallItem extends Item {
         return super.use(world, user, hand);
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if(Screen.hasShiftDown()) {
-            tooltip.add(new TranslatableText("item.blodreina.eight_ball.tooltip.shift"));
-        } else {
-            tooltip.add(new TranslatableText("item.blodreina.eight_ball.tooltip"));
+    /*
+        @Override
+        public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+            if(Screen.hasShiftDown()) {
+                tooltip.add(new TranslatableText("item.eight_ball.tooltip.shift"));
+            } else {
+                tooltip.add(new TranslatableText("item.eight_ball.tooltip"));
+            }
         }
-    }
+
+     */
     private void outputRandomNumber(PlayerEntity player) {
         player.sendMessage(new LiteralText("Your random number is " + getRandomNumber()), true);
     }

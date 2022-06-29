@@ -60,12 +60,15 @@ public class TanzaniteBomberItem extends Item {
 
         return TypedActionResult.success(itemStack, world.isClient());
     }
+/*
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()) {
-            tooltip.add(new TranslatableText("item.blodreina.tanzanite_bomber.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bekka.tanzanite_bomber.tooltip.shift"));
         } else {
-            tooltip.add(new TranslatableText("item.blodreina.tanzanite_bomber.tooltip"));
+            tooltip.add(new TranslatableText("item.bekka.tanzanite_bomber.tooltip"));
         }
     }
+
+ */
 }

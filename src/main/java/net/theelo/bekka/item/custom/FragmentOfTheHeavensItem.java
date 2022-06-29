@@ -42,14 +42,17 @@ public class FragmentOfTheHeavensItem extends Item {
         return super.useOnEntity(itemStack, user, entity, hand);
     }
 
+/*
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()) {
-            tooltip.add(new TranslatableText("item.blodreina.fragment_of_the_heavens.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bekka.fragment_of_the_heavens.tooltip.shift"));
         } else {
-            tooltip.add(new TranslatableText("item.blodreina.fragment_of_the_heavens.tooltip"));
+            tooltip.add(new TranslatableText("item.bekka.fragment_of_the_heavens.tooltip"));
         }
     }
+
+ */
 }
 
 
