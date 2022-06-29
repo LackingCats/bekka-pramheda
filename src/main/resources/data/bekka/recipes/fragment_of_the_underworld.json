@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bekka:compressed_tanzanite_block"
+    },
+    "X": {
+      "item": "minecraft:lava_bucket"
+    },
+    "T": {
+      "item": "bekka:tanzanite"
+    },
+    "F": {
+      "item": "bekka:fragment_of_the_heavens"
+    }
+  },
+  "pattern": [
+    "T#T",
+    "#X#",
+    "F#F"
+  ],
+  "result": {
+    "item": "bekka:fragment_of_the_underworld"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bekka:shard_of_tanzanite"
+    },
+    "X": {
+      "item": "bekka:tanzanite_block"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "item": "bekka:tanzanite_bomber"
+  }
+}

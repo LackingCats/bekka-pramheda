@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "bekka:compressed_tanzanite_block",
+    "bekka:deepslate_tanzanite_ore",
+    "bekka:nether_tanzanite_ore",
+    "bekka:raw_tanzanite_block",
+    "bekka:tanzanite_block",
+    "bekka:tanzanite_ore"
+  ]
+}
