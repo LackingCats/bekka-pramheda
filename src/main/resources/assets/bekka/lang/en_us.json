@@ -7,6 +7,7 @@
   "item.bekka.fragment_of_the_heavens": "Fragment of the Heavens",
   "item.bekka.fragment_of_the_underworld": "Fragment of the Underworld",
   "item.bekka.dowsing_rod": "Dowsing Rod",
+  "item.bekka.tanzanite_pole": "Tanzanite Pole",
 
   "block.bekka.tanzanite_block": "Block of Tanzanite",
   "block.bekka.raw_tanzanite_block": "Block of Raw Tanzanite",
@@ -16,6 +17,11 @@
   "block.bekka.nether_tanzanite_ore": "Nether Tanzanite Ore",
   "block.bekka.floater": "Floater",
   "block.bekka.speedy_block": "Speedy Block",
+  "block.bekka.tanzanite_button": "Tanzanite Button",
+  "block.bekka.tanzanite_pressure_plate": "Tanzanite Pressure Plate",
+  "block.bekka.tanzanite_fence": "Tanzanite Fence",
+  "block.bekka.tanzanite_wall": "Tanzanite Wall",
+  "block.bekka.tanzanite_fence_gate": "Tanzanite Fence Gate",
 
   "itemGroup.bekka.tanzanite": "Tanzanite",
 

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "W": {
+      "item": "bekka:tanzanite"
+    },
+    "#": {
+      "item": "bekka:tanzanite_pole"
+    }
+  },
+  "result": {
+    "item": "bekka:tanzanite_fence",
+    "count": 3
+  }
+}

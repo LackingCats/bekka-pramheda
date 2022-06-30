@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bekka:shard_of_tanzanite"
+    }
+  ],
+  "result": {
+    "item": "bekka:tanzanite_button"
+  }
+}

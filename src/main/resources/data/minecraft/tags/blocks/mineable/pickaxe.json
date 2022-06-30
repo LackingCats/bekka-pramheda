@@ -8,6 +8,11 @@
     "bekka:tanzanite_block",
     "bekka:tanzanite_ore",
     "bekka:floater",
-    "bekka:speedy_block"
+    "bekka:speedy_block",
+    "bekka:tanzanite_button",
+    "bekka:tanzanite_pressure_plate",
+    "bekka:tanzanite_fence",
+    "bekka:tanzanite_fence_gate",
+    "bekka:tanzanite_wall"
   ]
 }

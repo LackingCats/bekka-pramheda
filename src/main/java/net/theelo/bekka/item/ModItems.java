@@ -31,6 +31,8 @@ public class ModItems {
             new EightBallItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(1)));
     public static final Item DOWSING_ROD = registerItems("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
+    public static final Item TANZANITE_POLE = registerItems("tanzanite_pole",
+            new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
 
 
     private static Item registerItems(String name, Item item) {

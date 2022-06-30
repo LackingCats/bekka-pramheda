@@ -2,9 +2,7 @@ package net.theelo.bekka.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.OreBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -14,6 +12,8 @@ import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
 import net.theelo.bekka.block.custom.FloaterBlock;
 import net.theelo.bekka.block.custom.SpeedyBlock;
+import net.theelo.bekka.block.custom.generic.ModButtonBlock;
+import net.theelo.bekka.block.custom.generic.ModPressurePlateBlock;
 import net.theelo.bekka.util.ModItemGroup;
 
 public class ModBlocks {
@@ -49,6 +49,21 @@ public class ModBlocks {
                     ModItemGroup.TANZANITE);
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(95f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block TANZANITE_BUTTON = registerBlock("tanzanite_button",
+            new ModButtonBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15).noCollision()),
+                    ModItemGroup.TANZANITE);
+    public static final Block TANZANITE_PRESSURE_PLATE = registerBlock("tanzanite_pressure_plate",
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block TANZANITE_FENCE = registerBlock("tanzanite_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block TANZANITE_FENCE_GATE = registerBlock("tanzanite_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block TANZANITE_WALL = registerBlock("tanzanite_wall",
+            new WallBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
                     ModItemGroup.TANZANITE);
 // public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanzanite_ore",
 //         new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(8),
