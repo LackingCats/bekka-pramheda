@@ -80,6 +80,13 @@ public class FloaterBlock extends Block {
         world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
         world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
         world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
         super.onBreak(world, pos, state, player);
     }
 }

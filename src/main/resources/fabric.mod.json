@@ -34,5 +34,15 @@
   },
   "suggests": {
     "another-mod": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": {
+        "id": "bekka",
+        "name": "Bekka Pramheda",
+        "description": "I can offer you something even more powerful than the Flame... the true legacy of Bekka Pramheda, all power, all wisdom contained in one simple key",
+        "icon": "assets/bekka/ico/icon.png"
+      }
+    }
   }
 }

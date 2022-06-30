@@ -13,7 +13,8 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
 import net.theelo.bekka.block.custom.FloaterBlock;
-import net.theelo.bekka.lib0.ModItemGroup;
+import net.theelo.bekka.block.custom.SpeedyBlock;
+import net.theelo.bekka.util.ModItemGroup;
 
 public class ModBlocks {
 
@@ -44,7 +45,10 @@ public class ModBlocks {
                     UniformIntProvider.create(5, 10)),
                             ModItemGroup.TANZANITE);
     public static final Block FLOATER = registerBlock("floater",
-            new FloaterBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(85f).luminance(15)),
+            new FloaterBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(85f).luminance(14)),
+                    ModItemGroup.TANZANITE);
+    public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
+            new SpeedyBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(95f).luminance(15)),
                     ModItemGroup.TANZANITE);
 // public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanzanite_ore",
 //         new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(8),
