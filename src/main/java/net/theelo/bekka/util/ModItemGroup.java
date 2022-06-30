@@ -1,4 +1,4 @@
-package net.theelo.bekka.lib0;
+package net.theelo.bekka.util;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;

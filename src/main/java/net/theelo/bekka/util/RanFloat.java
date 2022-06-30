@@ -1,4 +1,4 @@
-package net.theelo.bekka.lib0;
+package net.theelo.bekka.util;
 
 import java.util.Random;
 

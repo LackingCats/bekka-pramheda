@@ -10,7 +10,7 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
 import net.theelo.bekka.item.custom.*;
-import net.theelo.bekka.lib0.ModItemGroup;
+import net.theelo.bekka.util.ModItemGroup;
 
 public class ModItems {
     public static final Item TANZANITE = registerItems("tanzanite",

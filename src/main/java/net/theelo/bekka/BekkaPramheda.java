@@ -3,6 +3,7 @@ package net.theelo.bekka;
 import net.fabricmc.api.ModInitializer;
 import net.theelo.bekka.block.ModBlocks;
 import net.theelo.bekka.item.ModItems;
+import net.theelo.bekka.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,5 +15,6 @@ public class BekkaPramheda implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModRegistries.registerModStuffs();
 	}
 }
