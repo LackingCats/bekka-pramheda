@@ -9,10 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
-import net.theelo.bekka.item.custom.EightBallItem;
-import net.theelo.bekka.item.custom.FragmentOfTheHeavensItem;
-import net.theelo.bekka.item.custom.FragmentOfTheUnderworldItem;
-import net.theelo.bekka.item.custom.TanzaniteBomberItem;
+import net.theelo.bekka.item.custom.*;
 import net.theelo.bekka.lib0.ModItemGroup;
 
 public class ModItems {
@@ -32,6 +29,8 @@ public class ModItems {
             new FragmentOfTheUnderworldItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).rarity(Rarity.RARE).maxCount(1)));
     public static final Item EIGHT_BALL = registerItems("eight_ball",
             new EightBallItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(1)));
+    public static final Item DOWSING_ROD = registerItems("dowsing_rod",
+            new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
 
 
     private static Item registerItems(String name, Item item) {

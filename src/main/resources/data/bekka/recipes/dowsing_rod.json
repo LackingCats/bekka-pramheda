@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "bekka:tanzanite"
+    },
+    "T": {
+      "item": "bekka:compressed_tanzanite_block"
+    }
+  },
+  "pattern": [
+    "#T#",
+    " # ",
+    " X "
+  ],
+  "result": {
+    "item": "bekka:dowsing_rod"
+  }
+}
