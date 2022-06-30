@@ -22,7 +22,7 @@ public class ModTags {
     }
 
     public static class Items {
-
+        //might use later??
         public static final Tag.Identified<Item> TANZANITE = createCommonTag("tanzanites");
         public static final Tag.Identified<Item> TANZANITE_NUGGETS = createCommonTag("tanzanite_nuggets");
 
