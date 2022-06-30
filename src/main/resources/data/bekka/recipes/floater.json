@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bekka:fragment_of_the_heavens"
+    },
+    "X": {
+      "item": "bekka:compressed_tanzanite_block"
+    },
+    "T": {
+      "item": "bekka:tanzanite"
+    }
+  },
+  "pattern": [
+    "#T#",
+    "TXT",
+    "#T#"
+  ],
+  "result": {
+    "item": "bekka:floater"
+  }
+}
