@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bekka:floater"
+    },
+    "X": {
+      "item": "bekka:fragment_of_the_underworld"
+    }
+  },
+  "pattern": [
+    "#",
+    "X"
+  ],
+  "result": {
+    "item": "bekka:launch"
+  }
+}

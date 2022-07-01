@@ -11,6 +11,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
 import net.theelo.bekka.block.custom.FloaterBlock;
+import net.theelo.bekka.block.custom.LaunchBlock;
 import net.theelo.bekka.block.custom.SpeedyBlock;
 import net.theelo.bekka.block.custom.generic.*;
 import net.theelo.bekka.util.ModItemGroup;
@@ -20,25 +21,20 @@ public class ModBlocks {
     public static final Block TANZANITE_BLOCK = registerBlock("tanzanite_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(55f).luminance(11).slipperiness(25f)),
                     ModItemGroup.TANZANITE);
-
     public static final Block RAW_TANZANITE_BLOCK = registerBlock("raw_tanzanite_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(50f).luminance(9).slipperiness(0.15f)),
                     ModItemGroup.TANZANITE);
-
     public static final Block COMPRESSED_TANZANITE_BLOCK = registerBlock("compressed_tanzanite_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(76f).luminance(13)),
                     ModItemGroup.TANZANITE);
-
     public static final Block TANZANITE_ORE = registerBlock("tanzanite_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(7),
                     UniformIntProvider.create(3, 7)),
                             ModItemGroup.TANZANITE);
-
     public static final Block DEEPSLATE_TANZANITE_ORE = registerBlock("deepslate_tanzanite_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(10f).luminance(7),
                     UniformIntProvider.create(5, 10)),
                             ModItemGroup.TANZANITE);
-
     public static final Block NETHERRACK_TANZANITE_ORE = registerBlock("nether_tanzanite_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(10),
                     UniformIntProvider.create(5, 10)),
@@ -48,6 +44,9 @@ public class ModBlocks {
                     ModItemGroup.TANZANITE);
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(95f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block LAUNCH = registerBlock("launch",
+            new LaunchBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(85f).luminance(14)),
                     ModItemGroup.TANZANITE);
     public static final Block TANZANITE_BUTTON = registerBlock("tanzanite_button",
             new ModButtonBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15).noCollision()),
