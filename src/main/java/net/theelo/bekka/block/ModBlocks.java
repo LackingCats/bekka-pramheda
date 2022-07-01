@@ -12,8 +12,7 @@ import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
 import net.theelo.bekka.block.custom.FloaterBlock;
 import net.theelo.bekka.block.custom.SpeedyBlock;
-import net.theelo.bekka.block.custom.generic.ModButtonBlock;
-import net.theelo.bekka.block.custom.generic.ModPressurePlateBlock;
+import net.theelo.bekka.block.custom.generic.*;
 import net.theelo.bekka.util.ModItemGroup;
 
 public class ModBlocks {
@@ -64,6 +63,18 @@ public class ModBlocks {
                     ModItemGroup.TANZANITE);
     public static final Block TANZANITE_WALL = registerBlock("tanzanite_wall",
             new WallBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block TANZANITE_SLAB = registerBlock("tanzanite_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block TANZANITE_STAIRS = registerBlock("tanzanite_stairs",
+            new ModStairsBlock(ModBlocks.TANZANITE_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block BLOODWOOD_DOOR = registerBlock("bloodwood_door",
+            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f).luminance(15).nonOpaque().breakByHand(true).requiresTool()),
+                    ModItemGroup.TANZANITE);
+    public static final Block BLOODWOOD_TRAPDOOR = registerBlock("bloodwood_trapdoor",
+            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).breakByHand(true).requiresTool().strength(2.0f).luminance(15).nonOpaque()),
                     ModItemGroup.TANZANITE);
 // public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanzanite_ore",
 //         new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(8),

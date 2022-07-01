@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "bekka:block/tanzanite_block",
+    "top": "bekka:block/tanzanite_block",
+    "side": "bekka:block/tanzanite_block"
+  }
+}

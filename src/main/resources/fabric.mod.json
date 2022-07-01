@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.theelo.bekka.BekkaPramheda"
+    ],
+    "client": [
+      "net.theelo.bekka.BekkaClientMod"
     ]
   },
   "mixins": [
