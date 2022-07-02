@@ -73,20 +73,20 @@ public class FloaterBlock extends Block {
         world.spawnEntity(lightning);
         world.spawnEntity(lightning);
         world.spawnEntity(lightning);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
-        world.createExplosion(player, player.getX(), player.getY(), player.getZ(), 10f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 1, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 10, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 20, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 30, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 40, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 50, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 60, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 70, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 80, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 90, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 100, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 110, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 120, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
+        world.createExplosion(player, player.getX(), player.getY() - 130, player.getZ(), 25f, false, Explosion.DestructionType.DESTROY);
         super.onBreak(world, pos, state, player);
     }
 }
