@@ -54,7 +54,7 @@ public class LaunchBlock extends Block {
         if(entity instanceof LivingEntity livingEntity) {
             livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*15, 25, false, false, false));
         }
-
+        entity.setOnFire(true);
 
         super.onSteppedOn(world, pos, state, entity);
     }
