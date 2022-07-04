@@ -5,11 +5,13 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bekka.BekkaPramheda;
 import net.theelo.bekka.item.custom.*;
+import net.theelo.bekka.item.custom.generic.ModToolMaterials;
 import net.theelo.bekka.util.ModItemGroup;
 
 public class ModItems {
@@ -33,6 +35,9 @@ public class ModItems {
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
     public static final Item TANZANITE_POLE = registerItems("tanzanite_pole",
             new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item TANZANITE_SWORD = registerItems("tanzanite_sword",
+            new TanzaniteSwordItem(ModToolMaterials.TANZANITE, 8, 2f,
+                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE))); //6 attack speed, 10 attack damage; public static final Item DIAMOND_SWORD = Items.register("diamond_sword", (Item)new SwordItem(ToolMaterials.DIAMOND, 3, -2.4f, new Item.Settings().group(ItemGroup.COMBAT)));
 
 
     private static Item registerItems(String name, Item item) {
