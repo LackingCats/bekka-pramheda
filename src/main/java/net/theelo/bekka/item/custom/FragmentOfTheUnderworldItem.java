@@ -15,31 +15,28 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.theelo.bekka.util.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+
+import static net.theelo.bekka.util.Random.rand;
 
 public class FragmentOfTheUnderworldItem extends Item {
     public FragmentOfTheUnderworldItem(Settings settings) {
         super(settings);
     }
 
-    public static int rand() {
-        int min = 1;
-        int max = 100;
-        return (int)Math.floor(Math.random()*(max-min+1)+min);
-    }
     @Override
     public ActionResult useOnEntity(ItemStack itemStack, @NotNull PlayerEntity user, @NotNull LivingEntity entity, Hand hand) {
-        if(rand() > 50) { //fifty percent chance
+        if(Random.rand() > 50) { //fifty percent chance
             entity.teleport(entity.getX(), -70, entity.getZ());
             user.sendMessage(new LiteralText("bye"), true);
-            user.getItemCooldownManager().set(this, 20*5);
         } else {
             user.sendMessage(new LiteralText("u are not worthy"), true);
-            user.getItemCooldownManager().set(this, 20*5);
         }
+        user.getItemCooldownManager().set(this, 20*5);
         return super.useOnEntity(itemStack, user, entity, hand);
     }
 /*

@@ -10,7 +10,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
-import net.theelo.bekka.util.RanFloat;
+import net.theelo.bekka.util.Random;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -45,7 +45,7 @@ public class TanzaniteBomberItem extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, SoundCategory.NEUTRAL, 14F, 2);
 
         if(!world.isClient) {
-            world.createExplosion(user, positioningX(user), positioningY(user), positioningZ(user), RanFloat.number(), true, Explosion.DestructionType.BREAK);
+            world.createExplosion(user, positioningX(user), positioningY(user), positioningZ(user), Random.randfloat(), true, Explosion.DestructionType.BREAK);
             user.getItemCooldownManager().set(this, 20*40);
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));

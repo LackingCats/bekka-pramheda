@@ -25,24 +25,24 @@ public class DowsingRodItem extends Item {
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
 
-            for(int i = 0; i <= positionClicked.getY() + 64; i++) {
+            for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
 
-                if(isValuableBlock(blockBelow)) {
+                if (isValuableBlock(blockBelow)) {
+                    assert player != null;
                     outputValuableCoords(positionClicked.down(i), player, blockBelow);
                     foundBlock = true;
-                    player.getItemCooldownManager().set(this, 20*20);
+                    player.getItemCooldownManager().set(this, 20 * 20);
                     break;
                 }
             }
 
-            if(!foundBlock) {
+            if (!foundBlock) {
+                assert player != null;
                 player.sendMessage(new TranslatableText("item.bekka.dowsing_rod.no_valuables"), false);
-                player.getItemCooldownManager().set(this, 20*20);
+                player.getItemCooldownManager().set(this, 20 * 20);
             }
         }
-
-
         return super.useOnBlock(context);
     }
 
