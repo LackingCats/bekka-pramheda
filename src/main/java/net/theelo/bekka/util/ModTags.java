@@ -10,6 +10,7 @@ import net.theelo.bekka.BekkaPramheda;
 public class ModTags {
     public static class Blocks {
         public static final Tag.Identified<Block> ORES = createTag("ores");
+        public static final Tag.Identified<Block> CAN_INSTANTLY_BREAK = createTag("can_instantly_break");
 
 
         private static Tag.Identified<Block> createTag(String name) {

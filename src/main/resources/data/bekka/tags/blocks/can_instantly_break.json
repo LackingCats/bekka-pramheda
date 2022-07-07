@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+      "#minecraft:beds",
+      "minecraft:crafting_table",
+      "bekka:floater",
+      "minecraft:sand",
+      "#minecraft:wool",
+      "#minecraft:beacon_base_blocks",
+      "#minecraft:parrots_spawnable_on",
+      "#minecraft:infiniburn_nether"
+  ]
+}
