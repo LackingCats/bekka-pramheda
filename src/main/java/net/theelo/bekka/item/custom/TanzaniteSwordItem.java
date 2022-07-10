@@ -3,6 +3,7 @@ package net.theelo.bekka.item.custom;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -14,6 +15,7 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import net.theelo.bekka.util.ModTags;
@@ -36,14 +38,20 @@ public class TanzaniteSwordItem extends SwordItem implements Vanishable {
         World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos();
         PlayerEntity player = Objects.requireNonNull(context.getPlayer());
-        Block block = context.getWorld().getBlockState(blockPos).getBlock();
+        Block block = world.getBlockState(blockPos).getBlock();
         Hand hand = player.getActiveHand();
         ItemStack itemStack = player.getStackInHand(hand);
+        //BlockState blockState = world.getBlockState(blockPos);
+        Vec3d eyePos = player.getEyePos();
 
         if(isCanInstantlyBreak(block)) {
             world.breakBlock(blockPos, true, player);
+            itemStack.setDamage(1);
+            TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
+            tntEntity.setPosition(eyePos);
+            world.spawnEntity(tntEntity);
         } else {
-            player.sendMessage(new LiteralText("oh no! the sword is too weak! and sSO Are YOU@@@"), false);
+            player.sendMessage(new LiteralText("oopsie"), true);
             float health = player.getHealth();
             float damage = (float) (health - 0.5);
             player.damage(DamageSource.GENERIC, damage);
