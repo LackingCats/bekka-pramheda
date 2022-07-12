@@ -8,3 +8,4 @@ public class ModStairsBlock extends StairsBlock {
         super(baseBlockState, settings);
     }
 }
+//test
