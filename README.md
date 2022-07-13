@@ -15,3 +15,4 @@ Random set of coloured leather armour
 ## Other
 
 Custom Boss
+Food random saturation/hunger + random status effect
