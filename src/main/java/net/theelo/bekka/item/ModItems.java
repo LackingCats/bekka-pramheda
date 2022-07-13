@@ -5,7 +5,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -38,7 +37,9 @@ public class ModItems {
     public static final Item TANZANITE_SWORD = registerItems("tanzanite_sword",
             new TanzaniteSwordItem(ModToolMaterials.TANZANITE, 8, 2f,
                     new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE))); //6 attack speed, 10 attack damage; public static final Item DIAMOND_SWORD = Items.register("diamond_sword", (Item)new SwordItem(ToolMaterials.DIAMOND, 3, -2.4f, new Item.Settings().group(ItemGroup.COMBAT)));
-
+    public static final Item TANZANITE_HYPERION = registerItems("tanzanite_hyperion",
+            new TanzaniteHyperionItem(ModToolMaterials.TANZANITE, 12, 1.5f,
+                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
 
     private static Item registerItems(String name, Item item) {
 
