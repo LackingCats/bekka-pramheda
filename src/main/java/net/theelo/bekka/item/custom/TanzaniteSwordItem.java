@@ -22,7 +22,6 @@ import net.theelo.bekka.util.ModTags;
 import net.theelo.bekka.util.Random;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Objects;
@@ -78,9 +77,6 @@ public class TanzaniteSwordItem extends SwordItem implements Vanishable {
                     WitherEntity wither = new WitherEntity(EntityType.WITHER, target.getWorld());
                     wither.setPosition(target.getPos());
                     target.getWorld().spawnEntity(wither);
-                    if(target instanceof PlayerEntity playerEntity1) {
-                        target.getWorld().breakBlock(target.getBlockPos(), false);
-                    }
                 } else {
                     EnderDragonEntity enderDragon = new EnderDragonEntity(EntityType.ENDER_DRAGON, target.getWorld());
                     enderDragon.setPosition(target.getPos());
@@ -101,11 +97,7 @@ public class TanzaniteSwordItem extends SwordItem implements Vanishable {
                 target.setOnFireFor(32767);
                 playerEntity.sendMessage(new LiteralText("2/" + random), true);
             } else if(random < 0.25) {
-                try {
-                    playerEntity.getWorld().close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                playerEntity.getWorld().disconnect();
                 playerEntity.sendMessage(new LiteralText("2.5/" + random), true);
             } else if(random < 0.3) {
                 playerEntity.getInventory().dropAll();
