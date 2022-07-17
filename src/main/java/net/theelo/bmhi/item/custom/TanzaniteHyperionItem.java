@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.Vanishable;
+import net.minecraft.text.LiteralText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
@@ -22,6 +23,14 @@ public class TanzaniteHyperionItem extends SwordItem implements Vanishable {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         world.createExplosion(user, user.getX(), user.getY(), user.getZ(), 40f, Explosion.DestructionType.NONE);
+        if(!world.isClient()){
+            int tpDist = 5;
+            Vec3d lookVector = user.getRotationVec(0);
+            Vec3d offset = lookVector.multiply(tpDist);
+            Vec3d destination = user.getPos().add(offset);
+            user.requestTeleport(destination.x, destination.y + 3, destination.z);
+            user.sendMessage(new LiteralText("/" + tpDist), true);
+        }
         return TypedActionResult.success(itemStack);
     }
 

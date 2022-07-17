@@ -16,6 +16,8 @@ import net.theelo.bmhi.util.ModItemGroup;
 public class ModItems {
     public static final Item TANZANITE = registerItems("tanzanite",
             new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item MOLTEN_TANZANITE = registerItems("molten_tanzanite",
+            new MoltenTanzaniteItem(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
     public static final Item RAW_TANZANITE = registerItems("raw_tanzanite",
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(32)));
     public static final Item SHARD_OF_TANZANITE = registerItems("shard_of_tanzanite",
