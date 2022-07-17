@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom",
-  "textures": {
-    "top": "bekka:block/bloodwood_door_top",
-    "bottom": "bekka:block/bloodwood_door_bottom"
-  }
-}

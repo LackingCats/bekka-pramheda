@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "bekka",
+  "id": "bmhi",
   "version": "${version}",
 
-  "name": "Bekka Pramheda",
-  "description": "I can offer you something even more powerful than the Flame... the true legacy of Bekka Pramheda, all power, all wisdom contained in one simple key.",
+  "name": "Badly Made Hypixel Items",
+  "description": "bmhi",
   "authors": [
     "theelo"
   ],
@@ -14,19 +14,19 @@
   },
 
   "license": "MIT",
-  "icon": "assets/bekka/ico/icon.png",
+  "icon": "assets/bmhi/ico/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.theelo.bekka.BekkaPramheda"
+      "net.theelo.bmhi.BMHI"
     ],
     "client": [
-      "net.theelo.bekka.BekkaClientMod"
+      "net.theelo.bmhi.BMHIClientMod"
     ]
   },
   "mixins": [
-    "bekka.mixins.json"
+    "bmhi.mixins.json"
   ],
 
   "depends": {

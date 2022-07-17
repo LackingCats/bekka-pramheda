@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "powered=false": { "model": "bekka:block/tanzanite_pressure_plate" },
-    "powered=true": { "model": "bekka:block/tanzanite_pressure_plate_down" }
-  }
-}

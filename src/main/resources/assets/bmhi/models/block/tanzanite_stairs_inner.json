@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "bmhi:block/tanzanite_block",
+    "top": "bmhi:block/tanzanite_block",
+    "side": "bmhi:block/tanzanite_block"
+  }
+}
