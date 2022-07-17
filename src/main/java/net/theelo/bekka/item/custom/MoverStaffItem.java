@@ -1,6 +1,8 @@
 package net.theelo.bekka.item.custom;
 
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -11,28 +13,51 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Objects;
 
-public class MoverSwordItem extends SwordItem implements Vanishable {
-    public MoverSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+public class MoverStaffItem extends SwordItem implements Vanishable {
+    public MoverStaffItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
-    public ActionResult useOnBlock(ItemUsageContext context) {
+    public boolean postHit(ItemStack stack, LivingEntity target, @NotNull LivingEntity attacker) {
+        World world = attacker.getWorld();
+        Hand hand = attacker.getActiveHand();
+        ItemStack itemStack = attacker.getStackInHand(hand);
+        world.playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+        if (!world.isClient) {
+            EnderPearlEntity moverPearlEntity = new EnderPearlEntity(world, attacker);
+            moverPearlEntity.setItem(itemStack);
+            moverPearlEntity.setVelocity(attacker, attacker.getPitch(), attacker.getYaw(), 0.0f, 3f, 1.0f);
+            world.spawnEntity(moverPearlEntity);
+        }
+        return super.postHit(stack, target, attacker);
+    }
+
+    @Override
+    public ActionResult useOnBlock(@NotNull ItemUsageContext context) {
         World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos();
         PlayerEntity user = Objects.requireNonNull(context.getPlayer());
+        Hand hand = user.getActiveHand();
+        ItemStack itemStack = user.getStackInHand(hand);
+        if(itemStack.getDamage() < 10) {
+            itemStack.setDamage(0);
+        } else {
+            itemStack.setDamage(itemStack.getDamage() - 2);
+        }
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 3f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         user.teleport(blockPos.getX(), blockPos.getY() + 3, blockPos.getZ());
         return ActionResult.SUCCESS;
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(@NotNull World world, @NotNull PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 3f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         int tpDist;
@@ -53,16 +78,13 @@ public class MoverSwordItem extends SwordItem implements Vanishable {
             Vec3d destination = user.getPos().add(offset);
             user.requestTeleport(destination.x, destination.y + 3, destination.z);
             user.sendMessage(new LiteralText("/" + tpDist), true);
+
+            if(itemStack.getDamage() < 10) {
+                itemStack.setDamage(0);
+            } else {
+                itemStack.setDamage(itemStack.getDamage() - 6);
+            }
         }
         return TypedActionResult.success(itemStack);
     }
 }
-/*
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
-        if (!world.isClient) {
-            EnderPearlEntity moverPearlEntity = new EnderPearlEntity(world, user);
-            moverPearlEntity.setItem(itemStack);
-            moverPearlEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 3f, 1.0f);
-            world.spawnEntity(moverPearlEntity);
-        }
- */

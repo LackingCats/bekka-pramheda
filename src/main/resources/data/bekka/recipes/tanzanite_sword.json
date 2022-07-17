@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bekka:tanzanite"
+    },
+    "X": {
+      "item": "bekka:tanzanite_pole"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "X"
+  ],
+  "result": {
+    "item": "bekka:tanzanite_sword"
+  }
+}

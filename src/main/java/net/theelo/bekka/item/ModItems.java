@@ -5,7 +5,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -41,12 +40,11 @@ public class ModItems {
     public static final Item TANZANITE_HYPERION = registerItems("tanzanite_hyperion",
             new TanzaniteHyperionItem(ModToolMaterials.TANZANITE, 12, 1.5f,
                     new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
-    public static final Item MOVER_SWORD = registerItems("mover_sword",
-            new MoverSwordItem(ToolMaterials.IRON, 2, -0.5f,
+    public static final Item MOVER_STAFF = registerItems("mover_staff",
+            new MoverStaffItem(ModToolMaterials.TANZANITE, 2, -0.5f,
                     new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
 
     private static Item registerItems(String name, Item item) {
-
         return Registry.register(Registry.ITEM, new Identifier(BekkaPramheda.MOD_ID, name), item);
     }
     public static void registerModItems() {

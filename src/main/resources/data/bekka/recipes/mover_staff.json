@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bekka:tanzanite"
+    },
+    "X": {
+      "item": "bekka:tanzanite_pole"
+    },
+    "B": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "#",
+    "B",
+    "X"
+  ],
+  "result": {
+    "item": "bekka:mover_staff"
+  }
+}
