@@ -1,7 +1,6 @@
 package net.theelo.bekka.item.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
@@ -24,7 +23,6 @@ public class DowsingRodItem extends Item {
             BlockPos positionClicked = context.getBlockPos();
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
-
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
 

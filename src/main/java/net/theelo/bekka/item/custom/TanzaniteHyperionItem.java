@@ -18,7 +18,7 @@ public class TanzaniteHyperionItem extends SwordItem implements Vanishable {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        world.createExplosion(user, user.getX(), user.getY(), user.getZ(), 8f, Explosion.DestructionType.NONE);
+        world.createExplosion(user, user.getX(), user.getY(), user.getZ(), 40f, Explosion.DestructionType.NONE);
         return TypedActionResult.success(itemStack);
     }
 }
