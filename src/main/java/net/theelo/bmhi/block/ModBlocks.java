@@ -70,10 +70,10 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.TANZANITE_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
                     ModItemGroup.TANZANITE);
     public static final Block BLOODWOOD_DOOR = registerBlock("bloodwood_door",
-            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f).luminance(15).nonOpaque().breakByHand(true).requiresTool()),
+            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f).luminance(15).nonOpaque()),
                     ModItemGroup.TANZANITE);
     public static final Block BLOODWOOD_TRAPDOOR = registerBlock("bloodwood_trapdoor",
-            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).breakByHand(true).requiresTool().strength(2.0f).luminance(15).nonOpaque()),
+            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f).luminance(15).nonOpaque()),
                     ModItemGroup.TANZANITE);
 // public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanzanite_ore",
 //         new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(8),
