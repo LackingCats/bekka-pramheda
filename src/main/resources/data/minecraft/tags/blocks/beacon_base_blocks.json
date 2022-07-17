@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "bekka:tanzanite_block",
-    "bekka:compressed_tanzanite_block"
+    "bmhi:tanzanite_block",
+    "bmhi:compressed_tanzanite_block"
   ]
 }

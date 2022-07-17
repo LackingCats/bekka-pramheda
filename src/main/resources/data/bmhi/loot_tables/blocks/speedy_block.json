@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "bekka:speedy_block"
+          "name": "bmhi:speedy_block"
         }
       ],
       "rolls": 1

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-      "bekka:bloodwood_door",
-      "bekka:bloodwood_trapdoor"
+      "bmhi:bloodwood_door",
+      "bmhi:bloodwood_trapdoor"
   ]
 }

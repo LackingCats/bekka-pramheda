@@ -6,13 +6,13 @@
   ],
   "key": {
     "#": {
-      "item": "bekka:tanzanite_pole"
+      "item": "bmhi:tanzanite_pole"
     },
     "W": {
-      "item": "bekka:tanzanite"
+      "item": "bmhi:tanzanite"
     }
   },
   "result": {
-    "item": "bekka:tanzanite_fence_gate"
+    "item": "bmhi:tanzanite_fence_gate"
   }
 }

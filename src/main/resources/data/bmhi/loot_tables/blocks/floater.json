@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "bekka:floater"
+          "name": "bmhi:floater"
         }
       ],
       "rolls": 1

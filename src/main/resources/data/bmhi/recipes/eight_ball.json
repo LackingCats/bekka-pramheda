@@ -5,7 +5,7 @@
       "item": "minecraft:black_stained_glass_pane"
     },
     "X": {
-      "item": "bekka:fragment_of_the_underworld"
+      "item": "bmhi:fragment_of_the_underworld"
     }
   },
   "pattern": [
@@ -14,6 +14,6 @@
     " # "
   ],
   "result": {
-    "item": "bekka:eight_ball"
+    "item": "bmhi:eight_ball"
   }
 }

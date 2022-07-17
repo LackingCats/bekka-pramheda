@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "bekka:compressed_tanzanite_block"
+      "item": "bmhi:compressed_tanzanite_block"
     },
     "X": {
       "item": "minecraft:lava_bucket"
     },
     "T": {
-      "item": "bekka:tanzanite"
+      "item": "bmhi:tanzanite"
     },
     "F": {
-      "item": "bekka:fragment_of_the_heavens"
+      "item": "bmhi:fragment_of_the_heavens"
     }
   },
   "pattern": [
@@ -20,6 +20,6 @@
     "F#F"
   ],
   "result": {
-    "item": "bekka:fragment_of_the_underworld"
+    "item": "bmhi:fragment_of_the_underworld"
   }
 }

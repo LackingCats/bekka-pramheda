@@ -1,21 +1,21 @@
 {
   "replace": false,
   "values": [
-    "bekka:compressed_tanzanite_block",
-    "bekka:deepslate_tanzanite_ore",
-    "bekka:nether_tanzanite_ore",
-    "bekka:raw_tanzanite_block",
-    "bekka:tanzanite_block",
-    "bekka:tanzanite_ore",
-    "bekka:floater",
-    "bekka:speedy_block",
-    "bekka:tanzanite_button",
-    "bekka:tanzanite_pressure_plate",
-    "bekka:tanzanite_fence",
-    "bekka:tanzanite_fence_gate",
-    "bekka:tanzanite_wall",
-    "bekka:tanzanite_slab",
-    "bekka:tanzanite_stairs",
-    "bekka:launch"
+    "bmhi:compressed_tanzanite_block",
+    "bmhi:deepslate_tanzanite_ore",
+    "bmhi:nether_tanzanite_ore",
+    "bmhi:raw_tanzanite_block",
+    "bmhi:tanzanite_block",
+    "bmhi:tanzanite_ore",
+    "bmhi:floater",
+    "bmhi:speedy_block",
+    "bmhi:tanzanite_button",
+    "bmhi:tanzanite_pressure_plate",
+    "bmhi:tanzanite_fence",
+    "bmhi:tanzanite_fence_gate",
+    "bmhi:tanzanite_wall",
+    "bmhi:tanzanite_slab",
+    "bmhi:tanzanite_stairs",
+    "bmhi:launch"
   ]
 }

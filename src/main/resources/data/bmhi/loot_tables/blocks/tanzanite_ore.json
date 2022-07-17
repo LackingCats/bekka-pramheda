@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "bekka:tanzanite_ore"
+              "name": "bmhi:tanzanite_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "bekka:raw_tanzanite"
+              "name": "bmhi:raw_tanzanite"
             }
           ]
         }

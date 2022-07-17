@@ -5,7 +5,7 @@
       "item": "minecraft:gold_ingot"
     },
     "X": {
-      "item": "bekka:tanzanite_pole"
+      "item": "bmhi:tanzanite_pole"
     },
     "G": {
       "item": "minecraft:gunpowder"
@@ -17,6 +17,6 @@
     "X"
   ],
   "result": {
-    "item": "bekka:tanzanite_hyperion"
+    "item": "bmhi:tanzanite_hyperion"
   }
 }

@@ -3,7 +3,7 @@
   "cookingtime": 100,
   "experience": 6.0,
   "ingredient": {
-    "item": "bekka:tanzanite_ore"
+    "item": "bmhi:tanzanite_ore"
   },
-  "result": "bekka:tanzanite"
+  "result": "bmhi:tanzanite"
 }

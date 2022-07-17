@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "bekka:tanzanite_block"
+      "item": "bmhi:tanzanite_block"
     }
   },
   "result": {
-    "item": "bekka:compressed_tanzanite_block"
+    "item": "bmhi:compressed_tanzanite_block"
   }
 }

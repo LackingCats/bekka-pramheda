@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "bekka:tanzanite"
+      "item": "bmhi:tanzanite"
     }
   },
   "result": {
-    "item": "bekka:tanzanite_pole",
+    "item": "bmhi:tanzanite_pole",
     "count": 4
   }
 }

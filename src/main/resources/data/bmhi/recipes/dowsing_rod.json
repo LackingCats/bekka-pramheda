@@ -5,10 +5,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "bekka:tanzanite"
+      "item": "bmhi:tanzanite"
     },
     "T": {
-      "item": "bekka:compressed_tanzanite_block"
+      "item": "bmhi:compressed_tanzanite_block"
     }
   },
   "pattern": [
@@ -17,6 +17,6 @@
     " X "
   ],
   "result": {
-    "item": "bekka:dowsing_rod"
+    "item": "bmhi:dowsing_rod"
   }
 }

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "bekka:bloodwood_trapdoor"
+          "name": "bmhi:bloodwood_trapdoor"
         }
       ],
       "rolls": 1

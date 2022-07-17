@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "bekka:nether_tanzanite_ore"
+              "name": "bmhi:nether_tanzanite_ore"
             },
             {
               "type": "minecraft:item",
@@ -47,7 +47,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "bekka:shard_of_tanzanite"
+              "name": "bmhi:shard_of_tanzanite"
             }
           ]
         }

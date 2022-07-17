@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "bekka:tanzanite"
+      "item": "bmhi:tanzanite"
     }
   },
   "result": {
-    "item": "bekka:tanzanite_wall",
+    "item": "bmhi:tanzanite_wall",
     "count": 6
   }
 }
