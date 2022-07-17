@@ -16,6 +16,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import net.theelo.bmhi.util.ModTags;
@@ -144,7 +145,7 @@ public class TanzaniteSwordItem extends SwordItem implements Vanishable {
     }
 
     private boolean isCanInstantlyBreak(Block block) {
-        return ModTags.Blocks.CAN_INSTANTLY_BREAK.contains(block);
+        return Registry.BLOCK.getOrCreateEntry(Registry.BLOCK.getKey(block).get()).isIn(ModTags.Blocks.CAN_INSTANTLY_BREAK);
     }
     private int maxTanzaniteToolDurability() {
         return 3514;

@@ -1,38 +1,38 @@
 package net.theelo.bmhi.util;
 
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.theelo.bmhi.BMHI;
 
 public class ModTags {
     public static class Blocks {
-        public static final Tag.Identified<Block> ORES = createTag("ores");
-        public static final Tag.Identified<Block> CAN_INSTANTLY_BREAK = createTag("can_instantly_break");
+        public static final TagKey<Block> ORES = createTag("ores");
+        public static final TagKey<Block> CAN_INSTANTLY_BREAK = createTag("can_instantly_break");
 
 
-        private static Tag.Identified<Block> createTag(String name) {
-            return TagFactory.BLOCK.create(new Identifier(BMHI.MOD_ID, name));
+        private static TagKey<Block> createTag(String name) {
+            return TagKey.of(Registry.BLOCK_KEY, new Identifier(BMHI.MOD_ID, name));
         }
 
-        private static Tag.Identified<Block> createCommonTag(String name) {
-            return TagFactory.BLOCK.create(new Identifier("c", name));
+        private static TagKey<Block> createCommonTag(String name) {
+            return TagKey.of(Registry.BLOCK_KEY, new Identifier("c", name));
         }
     }
 
     public static class Items {
         //might use later??
-        public static final Tag.Identified<Item> TANZANITE = createCommonTag("tanzanites");
-        public static final Tag.Identified<Item> TANZANITE_NUGGETS = createCommonTag("tanzanite_nuggets");
+        public static final TagKey<Item> TANZANITE = createCommonTag("tanzanites");
+        public static final TagKey<Item> TANZANITE_NUGGETS = createCommonTag("tanzanite_nuggets");
 
-        private static Tag.Identified<Item> createTag(String name) {
-            return TagFactory.ITEM.create(new Identifier(BMHI.MOD_ID, name));
+        private static TagKey<Item> createTag(String name) {
+            return TagKey.of(Registry.ITEM_KEY, new Identifier(BMHI.MOD_ID, name));
         }
 
-        private static Tag.Identified<Item> createCommonTag(String name) {
-            return TagFactory.ITEM.create(new Identifier("c", name));
+        private static TagKey<Item> createCommonTag(String name) {
+            return TagKey.of(Registry.ITEM_KEY, new Identifier("c", name));
         }
     }
 }
