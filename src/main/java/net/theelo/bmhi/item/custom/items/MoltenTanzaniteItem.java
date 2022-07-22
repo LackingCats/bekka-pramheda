@@ -1,4 +1,4 @@
-package net.theelo.bmhi.item.custom;
+package net.theelo.bmhi.item.custom.items;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

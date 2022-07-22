@@ -3,6 +3,7 @@ package net.theelo.bmhi;
 import net.fabricmc.api.ModInitializer;
 import net.theelo.bmhi.block.ModBlocks;
 import net.theelo.bmhi.item.ModItems;
+import net.theelo.bmhi.item.custom.tools.ModTools;
 import net.theelo.bmhi.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,5 +17,6 @@ public class BMHI implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModRegistries.registerModStuffs();
+		ModTools.registerModTools();
 	}
 }

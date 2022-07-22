@@ -9,8 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bmhi.BMHI;
-import net.theelo.bmhi.item.custom.*;
-import net.theelo.bmhi.item.custom.generic.ModToolMaterials;
+import net.theelo.bmhi.item.custom.items.*;
 import net.theelo.bmhi.util.ModItemGroup;
 
 public class ModItems {
@@ -36,18 +35,6 @@ public class ModItems {
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
     public static final Item TANZANITE_POLE = registerItems("tanzanite_pole",
             new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
-    public static final Item TANZANITE_SWORD = registerItems("tanzanite_sword",
-            new TanzaniteSwordItem(ModToolMaterials.TANZANITE, 8, 2f,
-                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE))); //6 attack speed, 10 attack damage; public static final Item DIAMOND_SWORD = Items.register("diamond_sword", (Item)new SwordItem(ToolMaterials.DIAMOND, 3, -2.4f, new Item.Settings().group(ItemGroup.COMBAT)));
-    public static final Item TANZANITE_HYPERION = registerItems("tanzanite_hyperion",
-            new TanzaniteHyperionItem(ModToolMaterials.TANZANITE, 12, 1.5f,
-                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
-    public static final Item MOVER_STAFF = registerItems("mover_staff",
-            new MoverStaffItem(ModToolMaterials.TANZANITE, 2, -0.5f,
-                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
-    public static final Item EMBER_ROD = registerItems("ember_rod",
-            new EmberRodItem(ModToolMaterials.TANZANITE, 6, 4f,
-                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
 
     private static Item registerItems(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(BMHI.MOD_ID, name), item);

@@ -1,4 +1,4 @@
-package net.theelo.bmhi.item.custom.generic;
+package net.theelo.bmhi.item.custom.tools.constructors;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ToolMaterial;

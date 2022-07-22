@@ -1,4 +1,4 @@
-package net.theelo.bmhi.item.custom;
+package net.theelo.bmhi.item.custom.tools.swords;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FireballEntity;
