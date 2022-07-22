@@ -35,6 +35,7 @@ public class MoverStaffItem extends SwordItem implements Vanishable {
             moverPearlEntity.setItem(itemStack);
             moverPearlEntity.setVelocity(attacker, attacker.getPitch(), attacker.getYaw(), 0.0f, 3f, 1.0f);
             world.spawnEntity(moverPearlEntity);
+
         }
         return super.postHit(stack, target, attacker);
     }
@@ -46,10 +47,8 @@ public class MoverStaffItem extends SwordItem implements Vanishable {
         PlayerEntity user = Objects.requireNonNull(context.getPlayer());
         Hand hand = user.getActiveHand();
         ItemStack itemStack = user.getStackInHand(hand);
-        if(itemStack.getDamage() < 10) {
-            itemStack.setDamage(0);
-        } else {
-            itemStack.setDamage(itemStack.getDamage() - 2);
+        if(!world.isClient()){
+            itemStack.damage(6, user, p -> p.sendToolBreakStatus(hand));
         }
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 3f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         user.teleport(blockPos.getX(), blockPos.getY() + 3, blockPos.getZ());
@@ -79,10 +78,8 @@ public class MoverStaffItem extends SwordItem implements Vanishable {
             user.requestTeleport(destination.x, destination.y + 3, destination.z);
             user.sendMessage(new LiteralText("/" + tpDist), true);
 
-            if(itemStack.getDamage() < 10) {
-                itemStack.setDamage(0);
-            } else {
-                itemStack.setDamage(itemStack.getDamage() - 6);
+            if(!world.isClient()){
+                itemStack.damage(6, user, p -> p.sendToolBreakStatus(hand));
             }
         }
         return TypedActionResult.success(itemStack);

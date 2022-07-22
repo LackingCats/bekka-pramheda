@@ -10,7 +10,7 @@ public class ModRegistries {
     }
 
     private static void registerFuels() {
-        BMHI.LOGGER.info("register fuels for " + BMHI.MOD_ID);
+        BMHI.LOGGER.debug("register fuels for " + BMHI.MOD_ID);
         FuelRegistry registry = FuelRegistry.INSTANCE;
         registry.add(ModItems.FRAGMENT_OF_THE_UNDERWORLD, 32767);
     }

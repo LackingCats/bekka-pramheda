@@ -17,13 +17,15 @@ public class FragmentOfTheUnderworldItem extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack itemStack, @NotNull PlayerEntity user, @NotNull LivingEntity entity, Hand hand) {
+        if(!user.getWorld().isClient()){
+            itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
+        }
         if(Random.rand() > 50) { //fifty percent chance
             entity.teleport(entity.getX(), -70, entity.getZ());
             user.sendMessage(new LiteralText("bye"), true);
         } else {
             user.sendMessage(new LiteralText("u are not worthy"), true);
         }
-        user.getItemCooldownManager().set(this, 20*5);
         return super.useOnEntity(itemStack, user, entity, hand);
     }
 /*

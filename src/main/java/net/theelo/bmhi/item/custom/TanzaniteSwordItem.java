@@ -42,14 +42,11 @@ public class TanzaniteSwordItem extends SwordItem implements Vanishable {
         Hand hand = player.getActiveHand();
         ItemStack itemStack = player.getStackInHand(hand);
         Vec3d eyePos = player.getEyePos();
+        if(!world.isClient()){
+            itemStack.damage(1, player, p -> p.sendToolBreakStatus(hand));
+        }
         if(isCanInstantlyBreak(block)) {
             world.breakBlock(blockPos, true, player);
-            itemStack.setDamage(2);
-            if(itemStack.getDamage() < 10) {
-                itemStack.setDamage(0);
-            } else {
-                itemStack.setDamage(2);
-            }
             TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
             tntEntity.setPosition(eyePos);
             world.spawnEntity(tntEntity);
@@ -58,8 +55,10 @@ public class TanzaniteSwordItem extends SwordItem implements Vanishable {
             float health = player.getHealth();
             float damage = (float) (health - 0.5);
             player.damage(DamageSource.GENERIC, damage);
-            int toolDestroyer = maxTanzaniteToolDurability() - 1;
-            itemStack.setDamage(toolDestroyer);
+            if(!world.isClient()){
+                int toolDestroyer = maxTanzaniteToolDurability() - 1000;
+                itemStack.damage(toolDestroyer, player, p -> p.sendToolBreakStatus(hand));
+            }
         }
         return ActionResult.SUCCESS;
     }

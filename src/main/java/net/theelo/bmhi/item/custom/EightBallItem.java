@@ -18,12 +18,14 @@ public class EightBallItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             outputRandomNumber(user);
             user.getItemCooldownManager().set(this, 14);
+            itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
 
-        return super.use(world, user, hand);
+        return TypedActionResult.success(itemStack);
     }
 
     /*

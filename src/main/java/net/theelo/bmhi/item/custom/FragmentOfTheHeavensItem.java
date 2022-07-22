@@ -22,6 +22,9 @@ public class FragmentOfTheHeavensItem extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack itemStack, @NotNull PlayerEntity user, @NotNull LivingEntity entity, Hand hand) {
+        if(!user.getWorld().isClient()){
+            itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
+        }
         if(Random.rand() > 50) { //fifty percent chance
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION,20*20, 2, false, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING,20*40, 2, false, false, false));
@@ -29,7 +32,6 @@ public class FragmentOfTheHeavensItem extends Item {
         } else {
             user.sendMessage(new LiteralText("u are not worthy"), true);
         }
-        user.getItemCooldownManager().set(this, 20*5); //20 (one second/20 ticks)
         return super.useOnEntity(itemStack, user, entity, hand);
     }
 

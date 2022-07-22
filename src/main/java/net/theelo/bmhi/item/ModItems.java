@@ -27,11 +27,11 @@ public class ModItems {
     public static final Item TANZANITE_BOMBER = registerItems("tanzanite_bomber",
             new TanzaniteBomberItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(16)));
     public static final Item FRAGMENT_OF_THE_HEAVENS = registerItems("fragment_of_the_heavens",
-            new FragmentOfTheHeavensItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).rarity(Rarity.RARE).maxCount(1)));
+            new FragmentOfTheHeavensItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).rarity(Rarity.RARE).maxCount(1).maxDamage(500)));
     public static final Item FRAGMENT_OF_THE_UNDERWORLD = registerItems("fragment_of_the_underworld",
-            new FragmentOfTheUnderworldItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).rarity(Rarity.RARE).maxCount(1)));
+            new FragmentOfTheUnderworldItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).rarity(Rarity.RARE).maxCount(1).maxDamage(500)));
     public static final Item EIGHT_BALL = registerItems("eight_ball",
-            new EightBallItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(1)));
+            new EightBallItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(1).maxDamage(500)));
     public static final Item DOWSING_ROD = registerItems("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
     public static final Item TANZANITE_POLE = registerItems("tanzanite_pole",
@@ -45,11 +45,14 @@ public class ModItems {
     public static final Item MOVER_STAFF = registerItems("mover_staff",
             new MoverStaffItem(ModToolMaterials.TANZANITE, 2, -0.5f,
                     new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item EMBER_ROD = registerItems("ember_rod",
+            new EmberRodItem(ModToolMaterials.TANZANITE, 6, 4f,
+                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
 
     private static Item registerItems(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(BMHI.MOD_ID, name), item);
     }
     public static void registerModItems() {
-        BMHI.LOGGER.info("register items: " + BMHI.MOD_ID);
+        BMHI.LOGGER.debug("register items: " + BMHI.MOD_ID);
     }
 }

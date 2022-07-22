@@ -92,6 +92,6 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        BMHI.LOGGER.info("Registering ModBlocks for " + BMHI.MOD_ID);
+        BMHI.LOGGER.debug("Registering ModBlocks for " + BMHI.MOD_ID);
     }
 }
