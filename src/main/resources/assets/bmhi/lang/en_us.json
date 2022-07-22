@@ -1,6 +1,6 @@
 {
   "item.bmhi.tanzanite": "Tanzanite",
-  "item.bmhi.molten_tanzanite": "Tanzanite",
+  "item.bmhi.molten_tanzanite": "Molten Tanzanite",
   "item.bmhi.raw_tanzanite": "Raw Tanzanite",
   "item.bmhi.shard_of_tanzanite": "Shard Of Tanzanite",
   "item.bmhi.eight_ball": "14 Ball",
@@ -17,6 +17,10 @@
   "item.bmhi.tanzanite_hyperion": "Tanzanite Hyperion",
   "item.bmhi.mover_staff": "Mover Staff",
   "item.bmhi.ember_rod": "Ember Rod",
+  "item.bmhi.molten_helmet": "Molten Helmet",
+  "item.bmhi.molten_chestplate": "Molten Chestplate",
+  "item.bmhi.molten_leggings": "Molten Leggings",
+  "item.bmhi.molten_boots": "Molten Boots",
 
   "block.bmhi.tanzanite_block": "Block of Tanzanite",
   "block.bmhi.raw_tanzanite_block": "Block of Raw Tanzanite",
