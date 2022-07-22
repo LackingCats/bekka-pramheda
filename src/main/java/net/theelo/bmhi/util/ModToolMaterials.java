@@ -1,4 +1,4 @@
-package net.theelo.bmhi.item.custom.tools.constructors;
+package net.theelo.bmhi.util;
 
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;

@@ -5,12 +5,16 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bmhi.BMHI;
-import net.theelo.bmhi.item.custom.tools.constructors.ModToolMaterials;
+import net.theelo.bmhi.item.custom.tools.axes.TanzaniteAxeItem;
+import net.theelo.bmhi.item.custom.tools.hoes.TanzaniteHoeItem;
+import net.theelo.bmhi.item.custom.tools.pickaxes.TanzanitePickaxeItem;
+import net.theelo.bmhi.item.custom.tools.shovels.TanzaniteShovelItem;
 import net.theelo.bmhi.item.custom.tools.swords.EmberRodItem;
 import net.theelo.bmhi.item.custom.tools.swords.MoverStaffItem;
 import net.theelo.bmhi.item.custom.tools.swords.TanzaniteHyperionItem;
 import net.theelo.bmhi.item.custom.tools.swords.TanzaniteSwordItem;
 import net.theelo.bmhi.util.ModItemGroup;
+import net.theelo.bmhi.util.ModToolMaterials;
 
 public class ModTools {
 
@@ -25,6 +29,18 @@ public class ModTools {
                     new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
     public static final Item EMBER_ROD = registerTools("ember_rod",
             new EmberRodItem(ModToolMaterials.TANZANITE, 6, 4f,
+                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item TANZANITE_PICKAXE = registerTools("tanzanite_pickaxe",
+            new TanzanitePickaxeItem(ModToolMaterials.TANZANITE, 3, -2.8f,
+                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item TANZANITE_AXE = registerTools("tanzanite_axe",
+            new TanzaniteAxeItem(ModToolMaterials.TANZANITE, 10.0f, -3.0f,
+                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item TANZANITE_SHOVEL = registerTools("tanzanite_shovel",
+            new TanzaniteShovelItem(ModToolMaterials.TANZANITE, 3.0f, -2f,
+                    new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item TANZANITE_HOE = registerTools("tanzanite_hoe",
+            new TanzaniteHoeItem(ModToolMaterials.TANZANITE, -2, 0f,
                     new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
     private static Item registerTools(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(BMHI.MOD_ID, name), item);

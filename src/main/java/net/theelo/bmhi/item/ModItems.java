@@ -1,15 +1,13 @@
 package net.theelo.bmhi.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bmhi.BMHI;
 import net.theelo.bmhi.item.custom.items.*;
+import net.theelo.bmhi.util.ModFoodComponents;
 import net.theelo.bmhi.util.ModItemGroup;
 
 public class ModItems {
@@ -20,8 +18,7 @@ public class ModItems {
     public static final Item RAW_TANZANITE = registerItems("raw_tanzanite",
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(32)));
     public static final Item SHARD_OF_TANZANITE = registerItems("shard_of_tanzanite",
-            new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(64).food(
-                    new FoodComponent.Builder().statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION,20*300, 255, false, false, false), 1f).snack().build())));
+            new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(64).food(ModFoodComponents.SHARD_OF_TANZANITE)));
     //BOMBER IS HIGHLY UNSTABLE -- USE WITH CAUTION
     public static final Item TANZANITE_BOMBER = registerItems("tanzanite_bomber",
             new TanzaniteBomberItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(16)));
