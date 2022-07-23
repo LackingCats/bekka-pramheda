@@ -24,8 +24,8 @@ public class EmberRodItem extends SwordItem implements Vanishable {
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
         Vec3d vec3d = user.getRotationVec(1.0f);
-        FireballEntity fireballEntity = new FireballEntity(world, user, vec3d.x, vec3d.y, vec3d.z, 4);
-        fireballEntity.setVelocity(user, user.getPitch(), user.getYaw(), user.getRoll(),  4.0f, 0.0f);
+        FireballEntity fireballEntity = new FireballEntity(world, user, vec3d.x, vec3d.y, vec3d.z, 8);
+        fireballEntity.setVelocity(user, user.getPitch(), user.getYaw(), user.getRoll(),  5.5f, 0.0f);
         fireballEntity.setPosition(user.getX() + vec3d.x * 4.0, user.getBodyY(0.5) + 0.5, fireballEntity.getZ() + vec3d.z * 4.0);
         user.getWorld().spawnEntity(fireballEntity);
         return TypedActionResult.success(itemStack);
