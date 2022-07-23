@@ -7,6 +7,7 @@ import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
@@ -27,11 +28,15 @@ public class MoltenArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TOO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ModArmorMaterials.MOLTEN,
-                            new StatusEffectInstance(StatusEffects.REGENERATION, 20*50, 3)).build();
+                            new StatusEffectInstance(StatusEffects.REGENERATION, 20*50, 4)).build();
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TOOO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ModArmorMaterials.MOLTEN,
                             new StatusEffectInstance(StatusEffects.SATURATION, 20*50, 255)).build();
+    private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_GURL_EFFECT_MAP =
+            (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
+                    .put(ModArmorMaterials.MOLTEN,
+                            new StatusEffectInstance(StatusEffects.RESISTANCE, 20*50, 4)).build();
 
 
 
@@ -75,6 +80,11 @@ public class MoltenArmorItem extends ArmorItem {
 
             if(hasCorrectArmorOn(mappArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mappArmorMaterial, mappStatusEffect);
+                FireballEntity fireballEntity = new FireballEntity(player.getWorld(), player, 0, -25, 0, 8);
+                fireballEntity.setVelocity(player, 0, -25, 0,  4.0f, 0.0f);
+                fireballEntity.setVelocity(0, -25, 0, 4f, 0f);
+                fireballEntity.setPosition(positioningX(player), 150, positioningZ(player));
+                player.getWorld().spawnEntity(fireballEntity);
             }
         }
 
@@ -85,8 +95,19 @@ public class MoltenArmorItem extends ArmorItem {
             if(hasCorrectArmorOn(mapppArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapppArmorMaterial, mapppStatusEffect);
             }
-        }
 
+
+        }
+        for (Map.Entry<ArmorMaterial, StatusEffectInstance> entry : MATERIAL_GURL_EFFECT_MAP.entrySet()) {
+            ArmorMaterial mapeppArmorMaterial = entry.getKey();
+            StatusEffectInstance mapeppStatusEffect = entry.getValue();
+
+            if(hasCorrectArmorOn(mapeppArmorMaterial, player)) {
+                addStatusEffectForMaterial(player, mapeppArmorMaterial, mapeppStatusEffect);
+            }
+
+
+        }
     }
 
     private void addStatusEffectForMaterial(@NotNull PlayerEntity player, ArmorMaterial mapArmorMaterial, @NotNull StatusEffectInstance mapStatusEffect) {
@@ -138,7 +159,7 @@ public class MoltenArmorItem extends ArmorItem {
     }
 
     public double positioningX(@NotNull PlayerEntity player) {
-        if(getRandomNumber() < 25){
+        if(getRandomNumber() < 2500){
             return mpositioningX(player);
         } else {
             return ppositioningX(player);
@@ -146,16 +167,16 @@ public class MoltenArmorItem extends ArmorItem {
     }
 
     public double positioningZ(@NotNull PlayerEntity player) {
-        if(getRandomNumber() < 25){
+        if(getRandomNumber() < 2500){
             return mpositioningZ(player);
         } else {
             return ppositioningZ(player);
         }
     }
 
-    private int getRandomNumber() {
-        int min = 1;
-        int max = 50;
-        return ThreadLocalRandom.current().nextInt(min, max + 1);
+    private double getRandomNumber() {
+        double min = 1;
+        double max = 5000;
+        return ThreadLocalRandom.current().nextDouble(min, max + 1);
     }
 }

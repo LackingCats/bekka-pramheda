@@ -11,7 +11,7 @@ import net.theelo.bmhi.item.ModItems;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    MOLTEN("molten", 52, new int[]{7, 13, 16, 7/*boots, leggings, chestplates, helmets*/}, 32, SoundEvents.ENTITY_PARROT_IMITATE_MAGMA_CUBE, 12.0f, 0.6f, () -> Ingredient.ofItems(ModItems.MOLTEN_TANZANITE));
+    MOLTEN("molten", 492, new int[]{7, 13, 16, 7/*boots, leggings, chestplates, helmets*/}, 32, SoundEvents.ENTITY_PARROT_IMITATE_MAGMA_CUBE, 12.0f, 0.6f, () -> Ingredient.ofItems(ModItems.MOLTEN_TANZANITE));
 
     private static final int[] BASE_DURABILITY;
     private final String name;
