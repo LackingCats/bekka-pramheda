@@ -11,10 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.theelo.bmhi.BMHI;
-import net.theelo.bmhi.block.custom.FloaterBlock;
-import net.theelo.bmhi.block.custom.LaunchBlock;
-import net.theelo.bmhi.block.custom.MoltenFlowerBlock;
-import net.theelo.bmhi.block.custom.SpeedyBlock;
+import net.theelo.bmhi.block.custom.*;
 import net.theelo.bmhi.block.custom.generic.*;
 import net.theelo.bmhi.util.ModItemGroup;
 
@@ -70,6 +67,9 @@ public class ModBlocks {
                     ModItemGroup.TANZANITE);
     public static final Block TANZANITE_STAIRS = registerBlock("tanzanite_stairs",
             new ModStairsBlock(ModBlocks.TANZANITE_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
+                    ModItemGroup.TANZANITE);
+    public static final Block LAMPLAMP = registerBlock("lamplamp",
+            new LampLampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(35f).luminance((state) -> state.get(LampLampBlock.CLICKED) ? 15 : 0)),
                     ModItemGroup.TANZANITE);
     public static final Block BLOODWOOD_DOOR = registerBlock("bloodwood_door",
             new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f).luminance(15).nonOpaque()),

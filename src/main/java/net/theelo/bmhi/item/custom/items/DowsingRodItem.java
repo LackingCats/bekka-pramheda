@@ -5,12 +5,15 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
+import net.theelo.bmhi.item.ModItems;
+import net.theelo.bmhi.util.InventoryUtil;
 import net.theelo.bmhi.util.ModTags;
 import org.jetbrains.annotations.NotNull;
 
@@ -38,6 +41,9 @@ public class DowsingRodItem extends Item {
                 if (isValuableBlock(blockBelow)) {
                     outputValuableCoords(positionClicked.down(i), player, blockBelow);
                     foundBlock = true;
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DOWSING_DATA_TABLET)) {
+                        addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
+                    }
                     break;
                 }
             }
@@ -47,6 +53,17 @@ public class DowsingRodItem extends Item {
             }
         }
         return super.useOnBlock(context);
+    }
+
+    private void addNbtToDataTablet(PlayerEntity player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet =
+                player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.DOWSING_DATA_TABLET));
+
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("bmhi.dowsing_rod.last_ore", "Found " + blockBelow.asItem().getName().getString() + " at (" +
+                pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
+
+        dataTablet.setNbt(nbtData);
     }
 
     private void outputValuableCoords(BlockPos blockPos, PlayerEntity player, Block blockBelow) {

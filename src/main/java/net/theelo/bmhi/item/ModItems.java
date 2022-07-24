@@ -34,6 +34,8 @@ public class ModItems {
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
     public static final Item TANZANITE_POLE = registerItems("tanzanite_pole",
             new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item DOWSING_DATA_TABLET = registerItems("dowsing_data_tablet",
+            new DowsingRodPainReliefTabletItem(new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
 
     private static Item registerItems(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(BMHI.MOD_ID, name), item);
