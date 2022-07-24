@@ -80,6 +80,9 @@ public class ModBlocks {
     public static final Block MOLTEN_FLOWER = registerBlock("molten_flower",
             new MoltenFlowerBlock(StatusEffects.FIRE_RESISTANCE, 3450, FabricBlockSettings.copy(Blocks.POPPY).nonOpaque()),
                     ModItemGroup.TANZANITE);
+    public static final Block MERRY_CRISMAS = registerBlock("merry_crismas",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(135f)),
+                    ModItemGroup.TANZANITE);
 // public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanzanite_ore",
 //         new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(8),
 //                 UniformIntProvider.create(7, 14)),
