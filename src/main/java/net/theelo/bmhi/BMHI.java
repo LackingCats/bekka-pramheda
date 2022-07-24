@@ -5,6 +5,7 @@ import net.theelo.bmhi.block.ModBlocks;
 import net.theelo.bmhi.item.ModItems;
 import net.theelo.bmhi.item.custom.armor.ModArmorPieces;
 import net.theelo.bmhi.item.custom.tools.ModTools;
+import net.theelo.bmhi.painting.ModPaintings;
 import net.theelo.bmhi.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,5 +21,6 @@ public class BMHI implements ModInitializer {
 		ModRegistries.registerModStuffs();
 		ModTools.registerModTools();
 		ModArmorPieces.registerModArmorPieces();
+		ModPaintings.registerModPaintings();
 	}
 }
