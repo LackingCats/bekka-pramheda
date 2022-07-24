@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mbc:fragment_of_the_heavens"
+    },
+    "X": {
+      "item": "mbc:compressed_tanzanite_block"
+    },
+    "T": {
+      "item": "mbc:tanzanite"
+    }
+  },
+  "pattern": [
+    "#T#",
+    "TXT",
+    "#T#"
+  ],
+  "result": {
+    "item": "mbc:floater"
+  }
+}

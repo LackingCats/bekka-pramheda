@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "bmhi",
+  "id": "mbc",
   "version": "${version}",
 
   "name": "Badly Made Hypixel Items",
-  "description": "bmhi",
+  "description": "mightbecursed?",
   "authors": [
     "theelo"
   ],
@@ -14,19 +14,19 @@
   },
 
   "license": "MIT",
-  "icon": "assets/bmhi/ico/icon.png",
+  "icon": "assets/mbc/ico/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.theelo.bmhi.BMHI"
+      "net.theelo.mbc.MightBeCursed"
     ],
     "client": [
-      "net.theelo.bmhi.BMHIClientMod"
+      "net.theelo.mbc.MightBeCursedClient"
     ]
   },
   "mixins": [
-    "bmhi.mixins.json"
+    "mbc.mixins.json"
   ],
 
   "depends": {

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_rh",
-  "textures": {
-    "top": "bmhi:block/bloodwood_door_top",
-    "bottom": "bmhi:block/bloodwood_door_bottom"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "cookingtime": 100,
-  "experience": 6.0,
-  "ingredient": {
-    "item": "bmhi:raw_tanzanite"
-  },
-  "result": "bmhi:tanzanite"
-}

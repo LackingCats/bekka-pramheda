@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "mbc:tanzanite"
+    }
+  },
+  "result": {
+    "item": "mbc:tanzanite_pressure_plate"
+  }
+}

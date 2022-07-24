@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mbc:tanzanite_block"
+    },
+    "X": {
+      "item": "minecraft:magenta_glazed_terracotta"
+    },
+    "F": {
+      "item": "mbc:tanzanite"
+    },
+    "S": {
+      "item": "mbc:shard_of_tanzanite"
+    }
+  },
+  "pattern": [
+    "F#F",
+    "#X#",
+    "S#F"
+  ],
+  "result": {
+    "item": "mbc:speedy_block"
+  }
+}

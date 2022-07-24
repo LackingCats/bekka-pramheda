@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": { "model": "mbc:block/lamplamp_off" },
+    "clicked=true": { "model": "mbc:block/lamplamp_on" }
+  }
+}

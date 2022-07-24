@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 6.0,
+  "ingredient": {
+    "item": "mbc:raw_tanzanite"
+  },
+  "result": "mbc:tanzanite"
+}

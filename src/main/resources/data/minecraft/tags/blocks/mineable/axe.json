@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-      "bmhi:bloodwood_door",
-      "bmhi:bloodwood_trapdoor"
+      "mbc:bloodwood_door",
+      "mbc:bloodwood_trapdoor"
   ]
 }

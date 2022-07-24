@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "clicked=false": { "model": "bmhi:block/lamplamp_off" },
-    "clicked=true": { "model": "bmhi:block/lamplamp_on" }
-  }
-}

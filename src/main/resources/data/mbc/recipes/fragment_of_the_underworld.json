@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mbc:compressed_tanzanite_block"
+    },
+    "X": {
+      "item": "minecraft:lava_bucket"
+    },
+    "T": {
+      "item": "mbc:tanzanite"
+    },
+    "F": {
+      "item": "mbc:fragment_of_the_heavens"
+    }
+  },
+  "pattern": [
+    "T#T",
+    "#X#",
+    "F#F"
+  ],
+  "result": {
+    "item": "mbc:fragment_of_the_underworld"
+  }
+}

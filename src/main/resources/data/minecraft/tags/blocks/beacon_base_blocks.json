@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "bmhi:tanzanite_block",
-    "bmhi:compressed_tanzanite_block"
+    "mbc:tanzanite_block",
+    "mbc:compressed_tanzanite_block"
   ]
 }

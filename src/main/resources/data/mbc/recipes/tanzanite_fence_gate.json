@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "mbc:tanzanite_pole"
+    },
+    "W": {
+      "item": "mbc:tanzanite"
+    }
+  },
+  "result": {
+    "item": "mbc:tanzanite_fence_gate"
+  }
+}

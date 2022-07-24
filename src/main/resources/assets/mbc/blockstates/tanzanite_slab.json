@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mbc:block/tanzanite_slab"
+    },
+    "type=double": {
+      "model": "mbc:block/tanzanite_block"
+    },
+    "type=top": {
+      "model": "mbc:block/tanzanite_slab_top"
+    }
+  }
+}

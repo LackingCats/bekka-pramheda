@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "cookingtime": 100,
-  "experience": 6.0,
-  "ingredient": {
-    "item": "bmhi:deepslate_tanzanite_ore"
-  },
-  "result": "bmhi:tanzanite"
-}

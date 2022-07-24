@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:black_stained_glass_pane"
+    },
+    "X": {
+      "item": "mbc:fragment_of_the_underworld"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "item": "mbc:eight_ball"
+  }
+}

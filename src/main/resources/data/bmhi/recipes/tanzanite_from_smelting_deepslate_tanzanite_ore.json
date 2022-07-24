@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "cookingtime": 200,
-  "experience": 5.0,
-  "ingredient": {
-    "item": "bmhi:deepslate_tanzanite_ore"
-  },
-  "result": "bmhi:tanzanite"
-}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mbc:block/compressed_tanzanite_block"
+  }
+}

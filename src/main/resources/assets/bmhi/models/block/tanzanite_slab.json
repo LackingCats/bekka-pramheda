@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "bmhi:block/tanzanite_block",
-    "top": "bmhi:block/tanzanite_block",
-    "side": "bmhi:block/tanzanite_block"
-  }
-}

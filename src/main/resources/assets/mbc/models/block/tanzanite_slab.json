@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "mbc:block/tanzanite_block",
+    "top": "mbc:block/tanzanite_block",
+    "side": "mbc:block/tanzanite_block"
+  }
+}

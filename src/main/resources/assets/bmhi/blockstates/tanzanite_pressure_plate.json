@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "powered=false": { "model": "bmhi:block/tanzanite_pressure_plate" },
-    "powered=true": { "model": "bmhi:block/tanzanite_pressure_plate_down" }
-  }
-}

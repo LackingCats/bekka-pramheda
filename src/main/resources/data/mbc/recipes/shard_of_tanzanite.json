@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mbc:tanzanite"
+    }
+  ],
+  "result": {
+    "item": "mbc:shard_of_tanzanite",
+    "count": 9
+  }
+}

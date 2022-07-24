@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mbc:tanzanite"
+    },
+    "X": {
+      "item": "mbc:tanzanite_pole"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "X"
+  ],
+  "result": {
+    "item": "mbc:tanzanite_sword"
+  }
+}

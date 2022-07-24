@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "N": {
+      "item": "minecraft:gold_ingot"
+    },
+    "X": {
+      "item": "mbc:tanzanite_pole"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "N",
+    "G",
+    "X"
+  ],
+  "result": {
+    "item": "mbc:tanzanite_hyperion"
+  }
+}

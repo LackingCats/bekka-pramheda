@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mbc:shard_of_tanzanite"
+    }
+  ],
+  "result": {
+    "item": "mbc:tanzanite_button"
+  }
+}

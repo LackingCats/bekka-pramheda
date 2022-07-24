@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mbc:shard_of_tanzanite"
+    },
+    "X": {
+      "item": "mbc:tanzanite_block"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "item": "mbc:tanzanite_bomber"
+  }
+}

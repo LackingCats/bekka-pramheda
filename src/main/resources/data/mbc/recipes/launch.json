@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "mbc:floater"
+    },
+    "X": {
+      "item": "mbc:fragment_of_the_underworld"
+    }
+  },
+  "pattern": [
+    "#",
+    "X"
+  ],
+  "result": {
+    "item": "mbc:launch"
+  }
+}

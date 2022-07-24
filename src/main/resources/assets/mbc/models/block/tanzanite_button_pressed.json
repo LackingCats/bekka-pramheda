@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "mbc:block/tanzanite_block"
+  }
+}

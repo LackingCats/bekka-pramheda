@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "mbc:tanzanite"
+    },
+    "T": {
+      "item": "mbc:compressed_tanzanite_block"
+    }
+  },
+  "pattern": [
+    "#T#",
+    " # ",
+    " X "
+  ],
+  "result": {
+    "item": "mbc:dowsing_rod"
+  }
+}
