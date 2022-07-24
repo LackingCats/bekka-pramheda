@@ -3,6 +3,7 @@ package net.theelo.bmhi.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -12,6 +13,7 @@ import net.minecraft.util.registry.Registry;
 import net.theelo.bmhi.BMHI;
 import net.theelo.bmhi.block.custom.FloaterBlock;
 import net.theelo.bmhi.block.custom.LaunchBlock;
+import net.theelo.bmhi.block.custom.MoltenFlowerBlock;
 import net.theelo.bmhi.block.custom.SpeedyBlock;
 import net.theelo.bmhi.block.custom.generic.*;
 import net.theelo.bmhi.util.ModItemGroup;
@@ -74,6 +76,9 @@ public class ModBlocks {
                     ModItemGroup.TANZANITE);
     public static final Block BLOODWOOD_TRAPDOOR = registerBlock("bloodwood_trapdoor",
             new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f).luminance(15).nonOpaque()),
+                    ModItemGroup.TANZANITE);
+    public static final Block MOLTEN_FLOWER = registerBlock("molten_flower",
+            new MoltenFlowerBlock(StatusEffects.FIRE_RESISTANCE, 3450, FabricBlockSettings.copy(Blocks.POPPY).nonOpaque()),
                     ModItemGroup.TANZANITE);
 // public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanzanite_ore",
 //         new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(8),

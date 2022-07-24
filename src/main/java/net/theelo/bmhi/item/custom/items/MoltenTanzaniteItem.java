@@ -15,7 +15,7 @@ public class MoltenTanzaniteItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, @NotNull PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(@NotNull World world, @NotNull PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         if(user.isHolding(ModItems.MOLTEN_TANZANITE)) {
             user.setOnFireFor(218);
