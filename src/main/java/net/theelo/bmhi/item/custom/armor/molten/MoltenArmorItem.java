@@ -1,16 +1,16 @@
 package net.theelo.bmhi.item.custom.armor.molten;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LightningEntity;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.theelo.bmhi.util.ModArmorMaterials;
 import org.jetbrains.annotations.NotNull;
@@ -45,7 +45,7 @@ public class MoltenArmorItem extends ArmorItem {
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+    public void inventoryTick(ItemStack stack, @NotNull World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
                 if(hasFullSuitOfArmorOn(player)) {
@@ -55,6 +55,22 @@ public class MoltenArmorItem extends ArmorItem {
         }
 
         super.inventoryTick(stack, world, entity, slot, selected);
+    }
+    public void molten(@NotNull LivingEntity entity, World world, BlockPos blockPos) {
+        if (!entity.isOnGround()) {
+            return;
+        }
+        BlockState blockState = Blocks.MAGMA_BLOCK.getDefaultState();
+        float f = Math.min(2, 3);
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+        for (BlockPos blockPos2 : BlockPos.iterate(blockPos.add(-f, -1.0, -f), blockPos.add(f, -1.0, f))) {
+            if (!blockPos2.isWithinDistance(entity.getPos(), f)) continue;
+            mutable.set(blockPos2.getX(), blockPos2.getY() + 1, blockPos2.getZ());
+            BlockState blockState2 = world.getBlockState(mutable);
+            if (!blockState2.isAir()) continue;
+            world.setBlockState(blockPos2, blockState);
+            world.createAndScheduleBlockTick(blockPos2, Blocks.MAGMA_BLOCK, MathHelper.nextInt(entity.getRandom(), 60, 120));
+        }
     }
 
     private void evaluateArmorEffects(PlayerEntity player) {
@@ -66,6 +82,7 @@ public class MoltenArmorItem extends ArmorItem {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
                 LightningEntity lightningEntity = new LightningEntity(EntityType.LIGHTNING_BOLT, player.getWorld());
                 lightningEntity.setPosition(positioningX(player), player.getY(), positioningZ(player));
+                molten(player, player.getWorld(), player.getBlockPos());
                 if(positioningX(player) == player.getX() && positioningZ(player) == player.getZ()) {
                     return;
                 } else {
@@ -80,11 +97,14 @@ public class MoltenArmorItem extends ArmorItem {
 
             if(hasCorrectArmorOn(mappArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mappArmorMaterial, mappStatusEffect);
+                /*
                 FireballEntity fireballEntity = new FireballEntity(player.getWorld(), player, 0, -25, 0, 8);
                 fireballEntity.setVelocity(player, 0, -25, 0,  4.0f, 0.0f);
                 fireballEntity.setVelocity(0, -25, 0, 4f, 0f);
                 fireballEntity.setPosition(positioningX(player), 150, positioningZ(player));
                 player.getWorld().spawnEntity(fireballEntity);
+
+                 */
             }
         }
 
@@ -159,7 +179,7 @@ public class MoltenArmorItem extends ArmorItem {
     }
 
     public double positioningX(@NotNull PlayerEntity player) {
-        if(getRandomNumber() < 2500){
+        if(getRandomNumber() < 125){
             return mpositioningX(player);
         } else {
             return ppositioningX(player);
@@ -167,7 +187,7 @@ public class MoltenArmorItem extends ArmorItem {
     }
 
     public double positioningZ(@NotNull PlayerEntity player) {
-        if(getRandomNumber() < 2500){
+        if(getRandomNumber() < 125){
             return mpositioningZ(player);
         } else {
             return ppositioningZ(player);
@@ -176,7 +196,7 @@ public class MoltenArmorItem extends ArmorItem {
 
     private double getRandomNumber() {
         double min = 1;
-        double max = 5000;
+        double max = 250;
         return ThreadLocalRandom.current().nextDouble(min, max + 1);
     }
 }
