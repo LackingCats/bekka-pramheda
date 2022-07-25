@@ -1,11 +1,13 @@
 package net.theelo.mbc.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.theelo.mbc.MightBeCursed;
+import net.theelo.mbc.block.ModBlocks;
 import net.theelo.mbc.item.custom.items.*;
 import net.theelo.mbc.util.ModFoodComponents;
 import net.theelo.mbc.util.ModItemGroup;
@@ -36,6 +38,8 @@ public class ModItems {
             new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
     public static final Item DOWSING_DATA_TABLET = registerItems("dowsing_data_tablet",
             new DowsingRodPainReliefTabletItem(new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item BLOD_SEEDS = registerItems("blod_seeds",
+            new AliasedBlockItem(ModBlocks.BLOD_FUNGI, new FabricItemSettings().fireproof().group(ModItemGroup.TANZANITE)));
 
     private static Item registerItems(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MightBeCursed.MOD_ID, name), item);

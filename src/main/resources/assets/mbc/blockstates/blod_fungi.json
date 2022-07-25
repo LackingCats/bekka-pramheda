@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "mbc:block/blod_fungi0" },
+    "age=1": { "model": "mbc:block/blod_fungi1" },
+    "age=2": { "model": "mbc:block/blod_fungi2" },
+    "age=3": { "model": "mbc:block/blod_fungi3" },
+    "age=4": { "model": "mbc:block/blod_fungi4" },
+    "age=5": { "model": "mbc:block/blod_fungi5" },
+    "age=6": { "model": "mbc:block/blod_fungi6" },
+    "age=7": { "model": "mbc:block/blod_fungi7" }
+  }
+}

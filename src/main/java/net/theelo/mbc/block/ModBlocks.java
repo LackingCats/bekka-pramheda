@@ -3,17 +3,25 @@ package net.theelo.mbc.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.World;
 import net.theelo.mbc.MightBeCursed;
 import net.theelo.mbc.block.custom.*;
 import net.theelo.mbc.block.custom.generic.*;
 import net.theelo.mbc.util.ModItemGroup;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ModBlocks {
 
@@ -83,10 +91,29 @@ public class ModBlocks {
     public static final Block MERRY_CRISMAS = registerBlock("merry_crismas",
             new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(135f)),
                     ModItemGroup.TANZANITE);
+    public static final Block BLOD_FUNGI = registerBlockWithoutBlockItem("blod_fungi",
+            new BlodFungiBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque()),
+                    ModItemGroup.TANZANITE);
 // public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanzanite_ore",
 //         new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(8f).luminance(8),
 //                 UniformIntProvider.create(7, 14)),
 //                     ModItemGroup.TANZANITE);
+
+
+    private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
+        registerBlockItem(name, block, group, tooltipKey);
+        return Registry.register(Registry.BLOCK, new Identifier(MightBeCursed.MOD_ID, name), block);
+    }
+
+    private static Item registerBlockItem(String name, Block block, ItemGroup group, String tooltipKey) {
+        return Registry.register(Registry.ITEM, new Identifier(MightBeCursed.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings().group(group)) {
+                    @Override
+                    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                        tooltip.add(new TranslatableText(tooltipKey));
+                    }
+                });
+    }
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
@@ -98,6 +125,10 @@ public class ModBlocks {
         return Registry.register(Registry.ITEM, new Identifier(MightBeCursed.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(group)));
     }
+    private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {
+        return Registry.register(Registry.BLOCK, new Identifier(MightBeCursed.MOD_ID, name), block);
+    }
+
 
     public static void registerModBlocks() {
         MightBeCursed.LOGGER.debug("Registering ModBlocks for " + MightBeCursed.MOD_ID);
