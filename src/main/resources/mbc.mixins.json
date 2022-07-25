@@ -4,6 +4,7 @@
   "package": "net.theelo.mbc.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MBCEntityDataSaver"
   ],
   "client": [
     "MightBeCursedMixin"
