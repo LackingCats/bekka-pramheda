@@ -1,4 +1,4 @@
-package net.theelo.mbc.item.custom.tools.swords;
+package net.theelo.mbc.item.custom.tools.weapons;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;

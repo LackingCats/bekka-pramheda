@@ -9,10 +9,10 @@ import net.theelo.mbc.item.custom.tools.axes.TanzaniteAxeItem;
 import net.theelo.mbc.item.custom.tools.hoes.TanzaniteHoeItem;
 import net.theelo.mbc.item.custom.tools.pickaxes.TanzanitePickaxeItem;
 import net.theelo.mbc.item.custom.tools.shovels.TanzaniteShovelItem;
-import net.theelo.mbc.item.custom.tools.swords.EmberRodItem;
-import net.theelo.mbc.item.custom.tools.swords.MoverStaffItem;
-import net.theelo.mbc.item.custom.tools.swords.TanzaniteHyperionItem;
-import net.theelo.mbc.item.custom.tools.swords.TanzaniteSwordItem;
+import net.theelo.mbc.item.custom.tools.weapons.EmberRodItem;
+import net.theelo.mbc.item.custom.tools.weapons.MoverStaffItem;
+import net.theelo.mbc.item.custom.tools.weapons.TanzaniteHyperionItem;
+import net.theelo.mbc.item.custom.tools.weapons.TanzaniteSwordItem;
 import net.theelo.mbc.util.ModItemGroup;
 import net.theelo.mbc.util.ModToolMaterials;
 
@@ -42,6 +42,11 @@ public class ModTools {
     public static final Item TANZANITE_HOE = registerTools("tanzanite_hoe",
             new TanzaniteHoeItem(ModToolMaterials.TANZANITE, -2, 0f,
                     new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
+    /*
+    public static final Item BOOMBOW = registerTools("boombow",
+            new BoomBowItemBoom(new FabricItemSettings().fireproof().group(ModItemGroup.TANZANITE).maxDamage(5240)));
+
+     */
     private static Item registerTools(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MightBeCursed.MOD_ID, name), item);
     }

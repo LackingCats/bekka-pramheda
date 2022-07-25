@@ -1,0 +1,6 @@
+{
+  "parent": "mbc:item/boombow",
+  "textures": {
+    "layer0": "mbc:item/boombow_pulling_1"
+  }
+}
