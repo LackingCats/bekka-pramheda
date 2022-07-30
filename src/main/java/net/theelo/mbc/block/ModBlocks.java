@@ -18,6 +18,7 @@ import net.minecraft.world.World;
 import net.theelo.mbc.MightBeCursed;
 import net.theelo.mbc.block.custom.*;
 import net.theelo.mbc.block.custom.generic.*;
+import net.theelo.mbc.sound.ModSounds;
 import net.theelo.mbc.util.ModItemGroup;
 import org.jetbrains.annotations.Nullable;
 
@@ -77,8 +78,9 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.TANZANITE_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).requiresTool().strength(2.0f).luminance(15)),
                     ModItemGroup.TANZANITE);
     public static final Block LAMPLAMP = registerBlock("lamplamp",
-            new LampLampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(35f).luminance((state) -> state.get(LampLampBlock.CLICKED) ? 15 : 0)),
-                    ModItemGroup.TANZANITE);
+            new LampLampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(35f).luminance((state) -> state.get(LampLampBlock.CLICKED) ? 15 : 0)
+                    .sounds(ModSounds.LAMPLAMP_SOUNDS)),
+                            ModItemGroup.TANZANITE);
     public static final Block BLOODWOOD_DOOR = registerBlock("bloodwood_door",
             new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f).luminance(15).nonOpaque()),
                     ModItemGroup.TANZANITE);

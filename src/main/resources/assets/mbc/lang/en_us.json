@@ -25,6 +25,8 @@
   "item.mbc.dowsing_data_tablet": "Dowsing Data Tablet",
   "item.mbc.blod_seeds": "Blod Seeds",
   "item.mbc.boombow": "BoomBow™",
+  "item.mbc.berimbau_music_disk": "Berimbau Music Disk",
+  "item.mbc.berimbau_music_disk.desc": "pepezabala - berimbau (CC0)",
 
   "block.mbc.blod_fungi": "Blod Fungi",
   "block.mbc.tanzanite_block": "Block of Tanzanite",
@@ -50,6 +52,13 @@
   "block.mbc.merry_crismas": "Merry Crismas!",
 
   "itemGroup.mbc.tanzanite": "Tanzanite",
+
+  "mbc.dowsing_found_valuable": "Dowsing Rod Detected Ore",
+  "mbc.lamplamp_break": "LampLamp Has No Money",
+  "mbc.lamplamp_step": "LampLamp Went Up The Stairs",
+  "mbc.lamplamp_fall": "LampLamp Fell Down the Stairs",
+  "mbc.lamplamp_hit": "LampLamp Was Hurt :(",
+  "mbc.lamplamp_place": "LampLamp Lives At 123 Sesame Street",
 
   "item.mbc.dowsing_rod.no_valuables": "———————————No valuables?———————————\n⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝\n⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇\n⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀\n⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀\n⠀⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀\n⠀⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n—————————————————————————————"
 }

@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
@@ -13,6 +14,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.theelo.mbc.item.ModItems;
+import net.theelo.mbc.sound.ModSounds;
 import net.theelo.mbc.util.InventoryUtil;
 import net.theelo.mbc.util.ModTags;
 import org.jetbrains.annotations.NotNull;
@@ -44,6 +46,9 @@ public class DowsingRodItem extends Item {
                     if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DOWSING_DATA_TABLET)) {
                         addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
                     }
+
+                    context.getWorld().playSound(player, positionClicked, ModSounds.DOWSING_FOUND_VALUABLE, SoundCategory.BLOCKS, 1f, 1f);
+
                     break;
                 }
             }

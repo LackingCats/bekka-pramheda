@@ -1,0 +1,46 @@
+{
+  "dowsing_found_valuable": {
+    "subtitle": "mbc.dowsing_found_valuable",
+    "sounds": [
+      "mbc:dowsing_found_valuable"
+    ]
+  },
+  "lamplamp_break": {
+    "subtitle": "mbc.lamplamp_break",
+    "sounds": [
+      "mbc:lamplamp_break"
+    ]
+  },
+  "lamplamp_step": {
+    "subtitle": "mbc.lamplamp_step",
+    "sounds": [
+      "mbc:lamplamp_step"
+    ]
+  },
+  "lamplamp_place": {
+    "subtitle": "mbc.lamplamp_place",
+    "sounds": [
+      "mbc:lamplamp_place"
+    ]
+  },
+  "lamplamp_hit": {
+    "subtitle": "mbc.lamplamp_hit",
+    "sounds": [
+      "mbc:lamplamp_hit"
+    ]
+  },
+  "lamplamp_fall": {
+    "subtitle": "mbc.lamplamp_fall",
+    "sounds": [
+      "mbc:lamplamp_fall"
+    ]
+  },
+  "berimbau": {
+    "sounds": [
+      {
+        "name": "mbc:berimbau",
+        "stream": true
+      }
+    ]
+  }
+}

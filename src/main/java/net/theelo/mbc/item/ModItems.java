@@ -9,6 +9,8 @@ import net.minecraft.util.registry.Registry;
 import net.theelo.mbc.MightBeCursed;
 import net.theelo.mbc.block.ModBlocks;
 import net.theelo.mbc.item.custom.items.*;
+import net.theelo.mbc.item.custom.items.generic.ModMusicDiskItem;
+import net.theelo.mbc.sound.ModSounds;
 import net.theelo.mbc.util.ModFoodComponents;
 import net.theelo.mbc.util.ModItemGroup;
 
@@ -36,6 +38,8 @@ public class ModItems {
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
     public static final Item TANZANITE_POLE = registerItems("tanzanite_pole",
             new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
+    public static final Item BERIMBAU_MUSIC_DISK = registerItems("berimbau_music_disk",
+            new ModMusicDiskItem(7, ModSounds.BERIMBAU, new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
     public static final Item DOWSING_DATA_TABLET = registerItems("dowsing_data_tablet",
             new DowsingRodPainReliefTabletItem(new FabricItemSettings().maxCount(1).fireproof().group(ModItemGroup.TANZANITE)));
     public static final Item BLOD_SEEDS = registerItems("blod_seeds",
