@@ -9,6 +9,7 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -19,7 +20,7 @@ public class EightBallItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(@NotNull World world, @NotNull PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             outputRandomNumber(user);
@@ -48,7 +49,7 @@ public class EightBallItem extends Item {
         }
 
      */
-    private void outputRandomNumber(PlayerEntity player) {
+    private void outputRandomNumber(@NotNull PlayerEntity player) {
         player.sendMessage(new LiteralText("Your random number is " + getRandomNumber()), true);
     }
 
