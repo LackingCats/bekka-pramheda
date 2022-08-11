@@ -3,14 +3,15 @@
   "id": "mbc",
   "version": "${version}",
 
-  "name": "Badly Made Hypixel Items",
+  "name": "might be cursed",
   "description": "mightbecursed?",
   "authors": [
-    "theelo"
+    "nospacehuman"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/LackingCats/bekka-pramheda"
+    "sources": "https://github.com/LackingCats/bekka-pramheda",
+    "issues": "https://github.com/LackingCats/bekka-pramheda/issues"
   },
 
   "license": "MIT",
@@ -19,10 +20,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.theelo.mbc.MightBeCursed"
+      "net.nospacehuman.mbc.MightBeCursed"
     ],
     "client": [
-      "net.theelo.mbc.MightBeCursedClient"
+      "net.nospacehuman.mbc.MightBeCursedClient"
     ]
   },
   "mixins": [
