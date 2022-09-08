@@ -18,7 +18,7 @@ public class EmberRodItem extends SwordItem implements Vanishable {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, @NotNull PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(@NotNull World world, @NotNull PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         if(!world.isClient()){
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));

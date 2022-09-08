@@ -9,6 +9,7 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.nospacehuman.mbc.util.Functions;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -32,7 +33,7 @@ public class EightBallItem extends Item {
             creeperEntity.ignite();
             creeperEntity.setInvisible(true);
             creeperEntity.setHealth((float)18743);
-            world.spawnEntity(creeperEntity);
+            Functions.spawnCreeperFifty(world, creeperEntity);
         }
 
         return TypedActionResult.success(itemStack);
@@ -50,10 +51,10 @@ public class EightBallItem extends Item {
 
      */
     private void outputRandomNumber(@NotNull PlayerEntity player) {
-        player.sendMessage(new LiteralText("Your random number is " + getRandomNumber()), true);
+        player.sendMessage(new LiteralText("Your random number is " + getRandomNumberFourteen()), true);
     }
 
-    private int getRandomNumber() {
+    private int getRandomNumberFourteen() {
         int min = 1;
         int max = 14;
         return ThreadLocalRandom.current().nextInt(min, max + 1);

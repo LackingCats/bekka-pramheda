@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.nospacehuman.mbc.util.Random;
+import net.nospacehuman.mbc.util.Functions;
 import org.jetbrains.annotations.NotNull;
 
 public class FragmentOfTheUnderworldItem extends Item {
@@ -20,7 +20,7 @@ public class FragmentOfTheUnderworldItem extends Item {
         if(!user.getWorld().isClient()){
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
-        if(Random.rand() > 50) { //fifty percent chance
+        if(Functions.randint1to100() > 50) { //fifty percent chance
             entity.teleport(entity.getX(), -70, entity.getZ());
             user.sendMessage(new LiteralText("bye"), true);
         } else {

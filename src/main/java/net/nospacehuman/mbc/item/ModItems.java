@@ -36,6 +36,8 @@ public class ModItems {
             new EightBallItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(1).maxDamage(500)));
     public static final Item DOWSING_ROD = registerItems("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(128)));
+    //public static final Item TIME_TRAVELLER_STAFF = registerItems("time_traveller_staff",
+    //       new TimeTravellerItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxDamage(256 + Functions.randint1to100())));
     public static final Item TANZANITE_POLE = registerItems("tanzanite_pole",
             new Item(new FabricItemSettings().maxCount(64).fireproof().group(ModItemGroup.TANZANITE)));
     public static final Item BERIMBAU_MUSIC_DISK = registerItems("berimbau_music_disk",

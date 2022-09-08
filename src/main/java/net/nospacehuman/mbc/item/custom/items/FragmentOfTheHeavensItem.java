@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.nospacehuman.mbc.util.Random;
+import net.nospacehuman.mbc.util.Functions;
 import org.jetbrains.annotations.NotNull;
 
 
@@ -25,7 +25,7 @@ public class FragmentOfTheHeavensItem extends Item {
         if(!user.getWorld().isClient()){
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
-        if(Random.rand() > 50) { //fifty percent chance
+        if(Functions.randint1to100() > 50) { //fifty percent chance
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION,20*20, 2, false, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING,20*40, 2, false, false, false));
             user.sendMessage(new LiteralText("bye"), true);

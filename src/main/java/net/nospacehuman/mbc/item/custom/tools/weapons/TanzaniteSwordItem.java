@@ -19,8 +19,8 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
+import net.nospacehuman.mbc.util.Functions;
 import net.nospacehuman.mbc.util.ModTags;
-import net.nospacehuman.mbc.util.Random;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
@@ -86,7 +86,7 @@ public class TanzaniteSwordItem extends SwordItem implements Vanishable {
             } else if (random < 0.1) {
                 playerEntity.sendMessage(new LiteralText("1/" + random), true);
             } else if(random < 0.15) {
-                playerEntity.addExperience(Random.rand());
+                playerEntity.addExperience(Functions.randint1to100());
                 target.setOnFireFor(14);
                 target.getWorld().createExplosion(target, target.getX(), target.getY(), target.getZ(), 3f, true, Explosion.DestructionType.DESTROY);
                 playerEntity.sendMessage(new LiteralText("1.5/" + random), true);
